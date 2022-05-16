@@ -1,0 +1,138 @@
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-07-28 v.1 === */
+
+/*****************************************************************************************************
+	modificaciones admin para facilitar el trabajo
+******************************************************************************************************/
+body.has-control-menu #wrapper .container-fluid-1280 {
+	width: 80%;
+}
+
+body.has-control-menu yui3-skin-sam signed-in public-page site #wrapper section.portlet header.portlet-topper {
+	opacity: 1;
+	transform: translateY(-97%);
+}
+
+
+body.has-control-menu #wrapper section.portlet header.portlet-topper .portlet-topper-toolbar {
+	display: block;
+}
+
+body.has-control-menu header section.portlet:hover > .portlet-topper,
+body.has-control-menu header section.portlet.focus > .portlet-topper {
+	opacity: 0;
+	display: none;
+}
+
+
+/*****************************************************************************************************
+	estilos generales
+******************************************************************************************************/
+
+.journal-content-article dt.text-capitalize {
+	display: none;
+}
+
+.portlet-journal-content .portlet {
+  margin: 0;
+	margin-bottom: -25px;
+}
+
+
+/*************************************************************************************************************************************
+	## Peu > Smart City
+**************************************************************************************************************************************/
+
+footer .redpuntoes p {
+	font-size: 80%;
+}
+
+footer .redpuntoes p a {
+	font-size: 100%;
+}
+
+/*************************************************************************************************************************************
+	## Peu > Smart City > Xarxes
+**************************************************************************************************************************************/
+
+footer .redpuntoes {
+	border: 2px solid magenta;
+}
+
+footer .redpuntoes ul {
+	padding: 0;
+	list-style-type: none;
+	margin: 0 auto;
+	width: auto;
+	height: 100px;
+	border: 2px solid magenta;
+}
+
+footer .redpuntoes ul li {
+	float: left;
+	width: auto;
+	/*! border: 1px solid blue; */
+	height: 100%;
+	margin-right: 10px;
+}
+
+footer .redpuntoes ul li a:before,
+footer .redpuntoes ul li a:after,
+footer .redpuntoes ul li a {
+	display: block;
+	height:  100px;
+	color: transparent;
+	background-size: auto 100px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: red;
+}
+
+footer .redpuntoes ul li[title^="Ajuntament"] a:before,
+footer .redpuntoes ul li[title^="Smart"] a:after {
+	content:'';
+	width: 15px;
+	position: relative;
+	top: 0;
+}
+
+footer .redpuntoes ul li a:hover {
+	
+}
+
+footer .redpuntoes ul li[title^="Gobierno"] a {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/ministerio.jpg/6d7110a2-d29f-b819-0be9-cbe89af98ed0?t=1627473490823);
+	width: 540px;
+}
+
+footer .redpuntoes ul li[title^="Red"] a {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/red-es.svg/232577a4-e1bc-e790-e7e4-0a5d62c2c81d?t=1627473490651);
+	width: 300px;
+}
+
+footer .redpuntoes ul li[title^="Ciudades"] a {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/ciudades-inteligentes.svg/f0055c4f-4036-d50e-e31c-8fa4d73d71db?t=1627473490885);
+	width: 240px;
+}
+
+footer .redpuntoes ul li[title^="Ajuntament"] a:before {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-tanca.svg/c36e4a15-6346-ed73-70b4-54941bbcab5e?t=1627473490697);
+}
+
+footer .redpuntoes ul li[title^="Ajuntament"] a {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/Ajuntament-de-Valencia.svg/9a6d821a-46b5-ed2d-da10-648d7cb2d8ed?t=1627473490487);
+	width: 280px;
+}
+
+footer .redpuntoes ul li[title^="Smart"] a {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/Smart-City-Valencia+%281%29.svg/f41baa10-3d62-3f45-cf47-2ef3d153c29a?t=1627474190086);
+	width: 360px;
+}
+
+footer .redpuntoes ul li[title^="Smart"] a:after {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);
+}
+
+footer .redpuntoes ul li[title^="European"] a {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/unio-europea.svg/806b8676-5453-86c5-a9f8-1e8ac4af5388?t=1627473490555);
+	width: 130px;
+}
