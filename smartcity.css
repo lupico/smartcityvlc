@@ -1,4 +1,5 @@
-/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-07-29 v.1 === */
+
+		/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-12 v.1 === */
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
@@ -26,7 +27,12 @@ body.has-control-menu header section.portlet.focus > .portlet-topper {
 body:not(.has-control-menu) .alert.alert-info {
 	display: none!important;
 }
-
+.portlet-boundary,
+section.portlet {
+	height: auto;
+	display: block;
+	clear: both;
+}
 /*****************************************************************************************************
 	overrides plantilla ayto
 ******************************************************************************************************/
@@ -38,30 +44,123 @@ body {
 	max-width: none;
 }
 .col-1, .col-xs-1, .col-2, .col-xs-2, .col-3, .col-xs-3, .col-4, .col-xs-4, .col-5, .col-xs-5, .col-6, .col-xs-6, .col-7, .col-xs-7, .col-8, .col-xs-8, .col-9, .col-xs-9, .col-10, .col-xs-10, .col-11, .col-xs-11, .col-12, .col-xs-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+	position: relative;
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 section#content {
-    padding-bottom: 0;
+	padding-bottom: 0;
+}
+
+#footer-enlaces li {
+    float: none;
+}
+
+.title-page-image .label-subtitle #tit3 {display: none;}
+
+/*****************************************************************************************************
+	estilos generales > fuentes
+******************************************************************************************************/
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat'), local('Montserrat'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Regular.ttf/dc0c5ce6-4b9d-4d7e-511f-13744b95020b?t=1628666936259) format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat SemiBold';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Montserrat SemiBold'), local('Montserrat SemiBold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-SemiBold.ttf/ab064f98-2179-ed3a-0e9d-bcac62b56610?t=1628666936358) format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat Bold';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Montserrat Bold'), local('Montserrat Bold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Bold.ttf/d20c94fc-0386-ca3a-771a-8f8835f6c2c6?t=1628666936103) format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat Black';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Montserrat Black'), local('Montserrat Black'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Black.ttf/dd515957-6fb2-e158-21f1-d0816e3eeae5?t=1628666936467) format('truetype');
 }
 
 /*****************************************************************************************************
 	estilos generales
 ******************************************************************************************************/
-
+/* ocultar el título sd ela estructura */
 .journal-content-article dt.text-capitalize {
 	display: none;
 }
 
 .portlet-journal-content .portlet {
-  margin: 0;
+	margin: 0;
 	margin-bottom: -25px;
 }
 
 
+
+/*****************************************************************************************************
+	elementos > h2
+******************************************************************************************************/
+h2.portlet-title-text {
+	font-family: 'Montserrat Black', 'Calibri', Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1% 10%;
+	color: #ffd040;
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+/*****************************************************************************************************
+	elementos > botones
+******************************************************************************************************/
+a.btn {
+    color: #000;
+	font-weight: 600;
+    position: relative;
+    top: 0;
+    opacity: 1;
+    line-height: 20px;
+	text-transform: uppercase;
+	font-size: 12px;
+    padding: 8px 14px;
+	border: 2px solid #ffcd00;
+	border-radius: 4px;
+	background-color: #ffcd00;
+	margin: 0 15%;
+    display: block;
+    text-align: center;	
+	text-decoration: none;
+	
+	transition: opacity 1.5s ease;
+	-moz-transition: all 1.5s ease;
+	-ms-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+}
+
+a.btn:hover {
+    color: #ffcd00;
+	background-color: #333;
+}
+
+/*************************************************************************************************************************************
+	Cabecera de pagina > Imagen
+**************************************************************************************************************************************/
+body:not(.inicio) section.cabecera-pagina .background-image {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12905111/informacion-edificios_2.jpg/54734a95-4510-47e2-ab31-808b05799f45?t=1627641339139')!important;
+}
 /*************************************************************************************************************************************
 	## Peu > Smart City
 **************************************************************************************************************************************/
@@ -72,15 +171,12 @@ footer .redpuntoes p {
 
 footer .redpuntoes p a {
 	font-size: 100%;
+	text-decoration: none;
 }
 
-/*************************************************************************************************************************************
-	## Peu > Smart City > Xarxes
-**************************************************************************************************************************************/
-
 footer .redpuntoes {
-	margin: 2% auto 8% -10%;
-	width: 120%;
+	margin: 40px auto;
+	width: 90%;
 }
 
 footer .redpuntoes ul {
@@ -91,10 +187,8 @@ footer .redpuntoes ul {
 }
 
 footer .redpuntoes ul li {
-	float: left;
-	width: auto;
-	/*! border: 1px solid blue; */
-	height: 100%;
+	width: 100%;
+	height: auto;
 	margin-right: 0;
 }
 
@@ -102,88 +196,38 @@ footer .redpuntoes ul li:before,
 footer .redpuntoes ul li:after,
 footer .redpuntoes ul li a {
 	display: block;
-	height:  80px;
+	height: 80px;
 	color: transparent;
-	background-size: 95% auto;
+	background-size: auto 95%;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-}
-
-footer .redpuntoes ul li[title^="Ajuntament"]:before,
-footer .redpuntoes ul li[title^="Smart"]:after {
-	content:'';
-	width: 15px;
-	position: relative;
-	top: 0; 
-	background-size: 10px auto ;
-}
-footer .redpuntoes ul li[title^="Ajuntament"]:before {
-	margin-bottom: -80px;
-}
-
-footer .redpuntoes ul li[title^="Smart"]:after {
-	margin-top: -80px;
-	float: right;
-}
-
-footer .redpuntoes ul li a:hover {
-	
-}
-
-footer .redpuntoes ul li[title^="Gobierno"] {	
-	width: 28.7%;
+	margin-bottom: 40px;
+	text-decoration: none;
 }
 
 footer .redpuntoes ul li[title^="Gobierno"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/ministerio.jpg/6d7110a2-d29f-b819-0be9-cbe89af98ed0?t=1627473490823);
+	background-size: 100% auto;
 }
 
-footer .redpuntoes ul li[title^="Red"] {	
-	width: 15.9%;
-}
 
 footer .redpuntoes ul li[title^="Red"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/red-es.svg/232577a4-e1bc-e790-e7e4-0a5d62c2c81d?t=1627473490651);
-	background-size: 85% auto;
 }
 
-footer .redpuntoes ul li[title^="Ciudades"] {	
-	width: 12.7%;
-}
 footer .redpuntoes ul li[title^="Ciudades"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/ciudades-inteligentes.svg/f0055c4f-4036-d50e-e31c-8fa4d73d71db?t=1627473490885);
 }
-footer .redpuntoes ul li[title^="Ajuntament"]:before {	
-	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-tanca.svg/c36e4a15-6346-ed73-70b4-54941bbcab5e?t=1627473490697);
-	background-position: 100%  50%;
-}
 
-footer .redpuntoes ul li[title^="Ajuntament"] {	
-	width: 17%;
-}
 footer .redpuntoes ul li[title^="Ajuntament"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/Ajuntament-de-Valencia.svg/9a6d821a-46b5-ed2d-da10-648d7cb2d8ed?t=1627473490487);
-	background-size: auto 85px;
-	background-position: 100% 50%;
+	background-size: 100% auto;
 }
 
-footer .redpuntoes ul li[title^="Smart"] {	
-	width: 16.84%;
-}
 footer .redpuntoes ul li[title^="Smart"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/Smart-City-Valencia+%281%29.svg/f41baa10-3d62-3f45-cf47-2ef3d153c29a?t=1627474190086);
-	background-size: auto 50px;
-	background-position: 0 50%;
 }
 
-footer .redpuntoes ul li[title^="Smart"]:after {	
-	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);	
-	background-position:  0 50%;
-}
-
-footer .redpuntoes ul li[title^="European"] {	
-	width: 6.9%;
-}
 footer .redpuntoes ul li[title^="European"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/unio-europea.svg/806b8676-5453-86c5-a9f8-1e8ac4af5388?t=1627473490555);
 }
@@ -247,70 +291,724 @@ footer ul#menu-xarxes li a {
 	height: 100%;
 }
 
+@media screen and ( min-width: 992px ) {
+	footer .redpuntoes {
+		margin: 2% auto;
+		width: 100%;
+	}
+	
+	footer .redpuntoes ul li {
+		width: auto;
+		float: left;
+		height: 100%;
+	}
+	footer .redpuntoes ul li[title^="Gobierno"] {	
+		width: 28.7%;
+	}
 
+	footer .redpuntoes ul li[title^="Red"] {	
+		width: 15.9%;
+	}
+	footer .redpuntoes ul li[title^="Ciudades"] {	
+		width: 13.7%;
+	}
+	footer .redpuntoes ul li[title^="Ajuntament"] {	
+		width: 17%;
+	}
+	footer .redpuntoes ul li[title^="Smart"] {	
+		width: 16.84%;
+	}
+	footer .redpuntoes ul li[title^="European"] {	
+		width: 7.85%;
+	}
+
+	footer .redpuntoes ul li a {	
+		margin: 0;
+	}
+
+	footer .redpuntoes ul li[title^="Red"] a {	
+		background-size: 75% auto;
+	}
+	
+	footer .redpuntoes ul li[title^="Ciudades"] a {	
+		background-size: 80% auto;
+	}
+
+	footer .redpuntoes ul li[title^="Ajuntament"] a {	
+		background-size: auto 65px;
+		background-position: 100% 50%;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"] a {	
+		background-size: auto 35px;
+		background-position: 0 50%;
+	}
+	
+	footer .redpuntoes ul li[title^="Ajuntament"]:before,
+	footer .redpuntoes ul li[title^="Smart"]:after {
+		content:'';
+		width: 15px;
+		position: relative;
+		top: 0; 
+		background-size: 10px auto ;
+	}
+
+	footer .redpuntoes ul li[title^="Ajuntament"]:before {	
+		background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-tanca.svg/c36e4a15-6346-ed73-70b4-54941bbcab5e?t=1627473490697);
+		background-position: 100% 50%;
+		margin-bottom: -80px;
+		margin-left: -15px;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"]:after {	
+		background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);	
+		background-position: 0 50%;
+		margin-top: -80px;
+		float: right;
+	}
+	footer .redpuntoes ul li[title^="European"] a {	
+		background-size: 90% auto;
+	}
+
+}
+
+@media screen and ( min-width: 1270px ) {
+	footer .redpuntoes {
+		margin: 2% auto 8% -5%;
+		width: 110%;
+	}
+	
+	footer .redpuntoes ul li[title^="Red"] a {	
+		background-size: 85% auto;
+	}
+
+	footer .redpuntoes ul li[title^="Ajuntament"] a {	
+		background-size: auto 80px;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"] a {	
+		background-size: auto 45px;
+	}
+	
+	footer .redpuntoes ul li[title^="Ajuntament"]:before,
+	footer .redpuntoes ul li[title^="Smart"]:after {
+		width: 30px;
+	}
+}
+
+@media screen and ( min-width: 1600px ) {
+	footer .redpuntoes {
+		margin: 2% auto 8% -14%;
+		width: 128%;
+	}
+	
+	footer .redpuntoes ul li[title^="Ajuntament"] a {	
+		background-size: auto 85px;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"] a {	
+		background-size: auto 50px;
+	}
+	
+
+}
 /*****************************************************************************************************
 ======================================================================================================
 	Página Inicio (Valencia ciudad Inteligente)
 ======================================================================================================
 ******************************************************************************************************/
-/* menu */
-.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY {
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12905111/informacion-edificios_2.jpg/54734a95-4510-47e2-ab31-808b05799f45?t=1627641339139');
-	
-	/* colocar por debajo de los logros */
-	margin-top: -400px;
-	
+
+/*****************************************************************************************************
+	Inicio > Logros (milestones)
+******************************************************************************************************/
+
+@media screen and ( min-width: 992px ) {
+	/* ocultar título del menú (porque están los milestones) */
+	body.inicio .portlet-navigation section .title-page-image {
+		display: none;
+	}
 }
-.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY .title-page-image {
+
+
+body.inicio section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
+	height: auto;
+	padding-bottom: 50px;
+	margin-top: -10px;
+}
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd > p {
 	display: none;
 }
 
-/* logros (milestones) */
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk {
-/* logros - colocar por debajo del menú*/
-	height: 400px;
-	position: relative;
-	z-index: 5;
-	/*background-color: rgba(255,0,0,0.2);*/
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros {
+	padding-top: 5%;
 }
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd > p {
-	display: none;
-}
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros {
-	padding-top: 10%;
-}
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 {
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 {
 	color: #fff;
 	font-size: 1rem;
 	text-align: center;
 	text-shadow: 3px 3px 8px #000;
+	
+	display: block;
+	margin: 40px 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 }
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span {
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span {
 	display: block;
 }
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.counter-value {
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value {
 	font-size: 5rem;
+	line-height: 5rem;
 }
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol {
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:before,
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:after {
+	display: inline-block;
 	font-size: 3rem;
+	line-height: 5rem;
+}
+
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value.porcentaje:after {
+	content:'%';
+	margin-left: 10px;
+}
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value.mayor-que:before {
+	content:'>';
+	margin-right: 10px;
+}
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value.st:after {
+	content:'a';
+	margin-left: 10px;
+	top: -0.5em;
 	position: relative;
-	text-indent: 8rem;
 }
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol:nth-child(2):nth-last-child(2),
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol:nth-child(3):nth-last-child(2) {
-	margin-top: -5rem;
-	line-height: 5rem;
+
+html[lang="ca-ES"] section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value.st:after {
+	top: 0em;
+	position: relative;
 }
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol:nth-child(1) {
-	line-height: 5rem;
-	text-indent: 2rem;
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.frontcount2:nth-child(1):nth-last-child(4) {
+	height: 50px;
+}
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:nth-child(1):nth-last-child(3),
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:nth-child(2):nth-last-child(2) {
+	margin-top: 50px;
+}
+
+section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.symbol {
+	display: none;
+}
+
+@media screen and ( min-width: 992px ) {
+	
+	body.inicio #p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c_ {
+		/* colocar por encima del menú */
+		height: 600px;
+		position: relative;
+		top: -600px;
+		margin: 0 0 -600px 0;
+		pointer-events: none;
+		
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		background-image: url('https://wwwpre.valencia.es/documents/12306043/12905111/informacion-edificios_2.jpg/54734a95-4510-47e2-ab31-808b05799f45?t=1627641339139')!important;
+	}
+	
+	body.inicio:not(.has-control-menu) section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
+		height: 300px;
+		z-index: 5;
+		
+		/*border: 3px solid lime;*/
+	}
+/*
+	body.inicio .portlet-navigation:hover ~ #p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c_ #logros {
+		opacity: 0;
+	}
+	*/
+	section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 {
+		margin: 0;
+	}
+
+}
+
+/*****************************************************************************************************
+	Inicio > Call to Action > Comocer la Oficina de Ciudad Inteligente
+******************************************************************************************************/
+.cta {
+  	padding: 3% 0;
+  	margin: 0 auto;
+	width: 90%;
+}
+
+.cta p {
+  	text-align: center;
+}
+
+.cta button {
+  	margin: 0 auto;
+  	text-transform: uppercase;
+	text-align: center;
+	border: 2px solid #ffcd00;
+	border-radius: 5px;
+  	background-color: #ffcd00;
+	padding: 0 4%;
+	height: 40px;
+	line-height: 40px;
+	color: #000;
+	text-decoration: none;
+	display: block;
+	font-size: 80%;
+}
+
+.cta button:hover,
+.cta button:focus {
+  	background-color: transparent;
+}
+
+@media screen and ( min-width: 992px ) {
+	
+	.cta {
+		width: 100%;
+	}
+
+}	
+/*****************************************************************************************************
+	Inicio > Redes sociales
+******************************************************************************************************/
+.redes-sociales {
+	height: auto;
+	margin: 50px 0;
+}
+
+.redes-sociales .twitter a,
+.redes-sociales .facebook a,
+.redes-sociales .instagram a {
+  	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 25px;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/0/Smart-City_carregant.gif/0ff75131-90ef-58ea-7002-39fe0b3bde52?t=1627972280936');
+	color: transparent;
+	height: 500px;
+	display: block;
+}
+
+.redes-sociales .twitter iframe {
+	min-height: 500px!important;
+}
+
+.redes-sociales #fb-root {display: none;}
+
+@media screen and ( min-width: 992px ) {
+	
+	.redes-sociales {
+		height: 520px;
+		margin: 50px 0;
+	}
+
+	.redes-sociales .facebook .fb_iframe_widget {
+		margin: 0 20px;
+	}
+
+
+}
+/*****************************************************************************************************
+	Inicio > Bosquejos
+******************************************************************************************************/
+
+/* noticias */
+.formulario {
+  	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	padding: 3% 0;
+	margin: 60px auto;
+}
+
+/* formulario */
+.formulario {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-movil-formulario-home.jpg/ba2af374-7f9c-f9e3-0ebb-e5528783bdef?t=1627977801367');
+	height: 760px;
+}
+
+@media screen and ( min-width: 992px ) {
+	 
+	/* formulario */
+	.formulario {
+		background-position: 47.5% 50%;
+		background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-formulario-home.jpg/e389f015-84cd-0c3f-4407-b32e47f1a482?t=1627900483073');
+		height: 414px;
+	}
+
+
+}
+
+/*****************************************************************************************************
+======================================================================================================
+	Página Recursos
+======================================================================================================
+******************************************************************************************************/
+body.recursos {
+	display: block;
+	clear: both;
+	height: auto;
+}
+
+body.recursos .recursos #ulRecursos {
+	list-style: none;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	min-width: 0;
+}
+
+body.recursos .recursos ul li .journal-content-article div {
+	height: auto;
+	float: left;
+	margin: 0 0 1% 0;
+	width: 100%;
+}
+
+body.recursos .recursos ul li {
+}
+
+body.recursos .recursos ul li:last-of-type {
+	margin-right: 0;
+}
+
+body.recursos .recursos ul li > div {
+	height: auto;
+}
+body.recursos .recursos ul li .journal-content-article > div {
+	margin: 0;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	/*! margin: 0 10px 1rem 10px; */
+	margin: 0 auto 1rem auto;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 3px 3px 8px #ccc;
+}
+
+body.recursos .recursos ul li h3:before {
+	content:'';
+	height: 70px;
+	width: 70px;
+	
+	background-repeat: no-repeat;
+	background-position: 20px center;
+	background-size: auto 40px;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/calendario.svg/fa51baae-857a-da93-3a89-81800ed83423?t=1628684340763');
+	float: left;
+	margin-top:  -20px;
+}
+
+body.recursos .recursos ul li h3 {
+	font-family: Montserrat-SemiBold, sans-serif;
+	margin: 0;
+	padding: 20px 10px 8px 0;
+	height: auto;
+	width: 100%;
+	display: block;
+	text-transform: none;
+	font-size: 0.8rem;
+	line-height: 130%;
 	text-align: left;
-}
-.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.counter-value:nth-child(2):nth-last-child(2) {
-	margin-top: -5rem;
+	min-height: 70px;
+	box-sizing: border-box;
 }
 
 
+body.recursos .recursos ul li .url h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .calendario h3:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/calendario.svg/fa51baae-857a-da93-3a89-81800ed83423?t=1628684340763');
+}
+
+body.recursos .recursos ul li .video h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .pdf h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .documento h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .articulo h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .prensa h3:before {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li p {
+	padding: 0px 10px 10px 15px;
+	margin: 0;
+	font-size: 0.7em;
+	color: #333;
+	text-align: left;
+	line-height: 140%;
+	min-height: calc(100% - 135px);
+}
+
+body.recursos .recursos ul li p a {
+	padding: 0 0 1px 0;
+	margin: 0;
+	font-size: 100%;
+	height: 100%;
+	text-decoration: none;
+	font-weight: 600;
+	border-bottom: 2px solid #ffcd00;
+	color: #666;
+}
+
+body.recursos .recursos ul li p a:hover {
+	color: #000;
+}
+
+body.recursos .recursos #ulRecursos a.btn {
+	margin: 10px 15%;
+}
+
+/* videos */
+
+body.recursos .recursos ul li .journal-content-article .video .video-player:before {
+	display: block;
+	content:'';
+	z-index: 1;
+	background-color: #ffcd00;
+	outline: 15px solid rgba(255,255,0,0.3);
+	border-radius: 50%;
+	-webkit-border-radius: 50%; 
+  -moz-border-radius: 50%; 
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	z-index: 2;
+	/*top: 40%;
+	left: 40%;
+	margin: 20% 44%;*/
+	transform: translate(-50%, -50%);
+	top: 55%;
+	left: 50%;
+	transition: all 1.5s ease;
+	-moz-transition: all 1.5s ease;
+	-ms-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	box-sizing: content-box;
+	pointer-events: none;
+	
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/play.svg/3abaf2ee-5441-eec4-0d05-9a71171bcc5c?t=1628678488101');
+	
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player:hover:before {
+	outline: 30px solid rgba(255,255,0,0.4);
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player {
+	height: 180px;
+	width: 100%;
+	width: 90%;
+	height: 220px;
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player button {
+	/*height: 180px;*/
+	margin: 0 auto;
+	padding: 0;
+	height: 220px; 
+	width: 320px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player button img {
+	display: block;
+	width: 98%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	z-index: -1;
+}
+
+/* normas verdes */
+
+body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes .imagen {
+	width: 100%;
+	height: auto;
+	margin: 0 0 10px 0;
+	min-height: 0;
+	padding: 0 5%;
+	display: block;
+}
+
+body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes .imagen picture img {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and ( min-width: 640px ) {
+	body.recursos .recursos ul li .journal-content-article div {
+		width: auto;
+		width: 48%;
+		margin: 0 1% 1rem 1%;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div {
+		min-height: 140px;
+	}
+	body.recursos .recursos ul li .journal-content-article div.documentacion-administrativa,
+	body.recursos .recursos ul li .journal-content-article div.articulos {
+		min-height: 200px;
+	}
+	body.recursos .recursos ul li .journal-content-article div.video {
+		min-height: 410px;
+	}
+}
+
+@media screen and ( min-width: 920px ) {
+	
+	body.recursos .recursos ul li .journal-content-article div {
+		width: 23%;
+	}
+	
+	/* documentacion administrativa */
+	body.recursos .recursos ul li .journal-content-article div.documentacion-administrativa {
+		min-height: 195px;
+	}
+	
+	body.recursos .recursos ul li:nth-child(1):nth-last-child(7) .journal-content-article .documentacion-administrativa {
+		margin-left: 13%;
+	}
+
+	body.recursos .recursos ul li:nth-child(3):nth-last-child(4) .journal-content-article .documentacion-administrativa {
+	/*	margin-left: 10px;*/
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.documentacion-administrativa p {
+		min-height: 60px;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	
+	body.recursos .recursos ul li:nth-child(1):nth-last-child(2) .journal-content-article .certificacion {
+		margin-left: 27%;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article .informe {
+		margin-left: 39%;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.video {
+		width: 31.3%;
+		min-height: 405px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article .video .video-player {
+		/*height: auto;
+		width: 100%;*/
+		margin: 0 auto 10px auto;
+		display: block;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article .video .video-player:before {
+		top: 38%;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes,
+	body.recursos .recursos ul li .journal-content-article .prensa {
+		width: 31.3%;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes {
+		min-height: 320px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes p {
+		min-height: 185px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes .video-player:before {
+		top: 50%;
+	}
+	
+}
+
+@media screen and ( min-width: 1110px ) {
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes {
+		min-height: 300px;
+	}
+}
+
+@media screen and ( min-width: 1270px ) {
+	body.recursos .recursos #ulRecursos {
+		width: 1140px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.articulo p {
+		min-height: 65px;
+	}
+	
+	
+	body.recursos .recursos ul li .journal-content-article div.video {
+		min-height: 415px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes p {
+		min-height: 235px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes {
+		min-height: 365px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.prensa p {
+		min-height: 40px;
+	}
+	
+}
+	
