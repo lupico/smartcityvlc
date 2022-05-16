@@ -1,4 +1,13 @@
-/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-17 === */
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-23 === */
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/manrope/v4/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_M-bnBeA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 @font-face {
 font-family: "FontAwesome";
 font-weight: normal;
@@ -11,9 +20,11 @@ font-style : normal;
              url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
 }
 
+
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
 ******************************************************************************************************/
+
 body.has-control-menu #wrapper .container-fluid-1280 {
 	width: 80%;
 }
@@ -51,6 +62,7 @@ section.portlet {
 body {
 	overflow-x: hidden;
 }
+
 .valencia-layout > .container {
 	max-width: none;
 }
@@ -82,22 +94,23 @@ section#content {
 	src: local('Montserrat'), local('Montserrat'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Regular.ttf/dc0c5ce6-4b9d-4d7e-511f-13744b95020b?t=1628666936259) format('truetype');
 }
 @font-face {
-	font-family: 'Montserrat SemiBold';
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 600;
 	src: local('Montserrat SemiBold'), local('Montserrat SemiBold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-SemiBold.ttf/ab064f98-2179-ed3a-0e9d-bcac62b56610?t=1628666936358) format('truetype');
 }
 @font-face {
-	font-family: 'Montserrat Bold';
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 800;
 	src: local('Montserrat Bold'), local('Montserrat Bold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Bold.ttf/d20c94fc-0386-ca3a-771a-8f8835f6c2c6?t=1628666936103) format('truetype');
 }
+
 @font-face {
-	font-family: 'Montserrat Black';
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 900;
-	src: local('Montserrat Black'), local('Montserrat Black'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Black.ttf/dd515957-6fb2-e158-21f1-d0816e3eeae5?t=1628666936467) format('truetype');
+	src: local('Montserrat'), local('Montserrat'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Black.ttf/dd515957-6fb2-e158-21f1-d0816e3eeae5?t=1628666936467) format('truetype');
 }
 
 @font-face {
@@ -140,7 +153,7 @@ i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
 ******************************************************************************************************/
 h2.portlet-title-text,
 .journal-content-article article.proyecto h3 {
-	font-family: 'Montserrat Black', 'Calibri', Arial, Helvetica, sans-serif;
+	font-family: 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	color: #ffd040;
 	font-size: 2rem;
@@ -160,13 +173,14 @@ h2.portlet-title-text {
 	text-decoration: none;
 }
 
-.valencia-layout section.portlet section:not(.cabecera-pagina) a {
+.valencia-layout section.portlet section:not(.cabecera-pagina) a,
+.valencia-layout .journal-content-article article.proyecto p a:not(.enlace-externo) {
 	color: #595959;
-	font-weight: 600;
 	border-bottom: 2px solid #ffcd00;
 }
 
-.valencia-layout section.portlet section:not(.cabecera-pagina) a:hover {
+.valencia-layout section.portlet section:not(.cabecera-pagina) a:hover,
+.valencia-layout .journal-content-article article.proyecto p a:not(.enlace-externo):hover {
 	color: #333;
 	border-bottom: 2px solid #595959;
 }
@@ -180,9 +194,12 @@ h2.portlet-title-text {
 .valencia-layout ul#ulProjectes li a,
 .valencia-layout ul#ulProjectes li a:hover,
 .valencia-layout ul#ulODS li a,
-.valencia-layout ul#ulODS li a:hover {
+.valencia-layout ul#ulODS li a:hover,
+.valencia-layout .journal-content-article article.proyecto ul.project-pager li a,
+.valencia-layout .journal-content-article article.proyecto ul.project-pager li a:hover {
 	border-bottom: 2px solid transparent;
 }
+
 .valencia-layout footer ul li a,
 .valencia-layout footer ul li a:hover {
 	color: transparent;
@@ -222,6 +239,51 @@ h2.portlet-title-text {
 	color: #000;
 }
 */
+
+
+.valencia-layout .journal-content-article a.enlace-externo {
+	line-height: 50px;
+	height: 50px;
+	width: 100%;
+	display: inline-block;
+	padding: 0;
+	font-weight: 600;
+	color: #888;
+	text-align: left;
+	text-decoration: none;
+	border: none;
+}
+
+.valencia-layout .journal-content-article a.enlace-externo:hover {
+	color: #ffcd00;
+}
+
+.valencia-layout .journal-content-article a.enlace-externo:before {
+	display: block;
+	content: ' ';
+	font-size: 50px;
+	line-height: 50px;
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+	display: inline-block;
+	float: left;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/ventana-nueva.svg/489d395d-87ef-4aa7-a031-8af4f714c396?t=1630584861862');
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.valencia-layout .journal-content-article a.enlace-externo:hover:before {
+	filter: grayscale(100%);
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
 /*****************************************************************************************************
 	elementos > botones
 ******************************************************************************************************/
@@ -406,6 +468,8 @@ body.recursos .recursos ul li .journal-content-article .modal-body .embed-respon
 	padding: 3% 2% 3% 0;
 }
 
+.row.container-fluid .col-md-3:nth-of-type(2):nth-last-of-type(3),
+.row.container-fluid .col-md-3:nth-of-type(3):nth-last-of-type(2),
 .row.container .col-md-4:nth-of-type(2):nth-last-of-type(2),
 .row.container .col-md-6:first-of-type:nth-last-of-type(2) {
 	padding: 3% 2%;
@@ -1074,23 +1138,18 @@ body.connectaVLCi .journal-content-article .container-fluid {
 }
 
 body.connectaVLCi .journal-content-article .background-holder.container-fluid,
+.journal-content-article article.proyecto .col-xs-12.background-holder,
 body.connectaVLCi .journal-content-article .col-md-6.background-holder {
 	height: 30vw;
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12904179/SmartCityValencia.svg/b849aa48-cf42-6620-a20c-c2fb548ff113?t=1627551663760');
+	background-image: url('/documents/12306043/12904179/SmartCityValencia.svg/b849aa48-cf42-6620-a20c-c2fb548ff113?t=1627551663760');
 	margin: 0!important;
 	padding: 0!important;
 	overflow: hidden;
 	text-align: center;
 	position: relative;
-}
-
-body.connectaVLCi .journal-content-article .background-holder img {
-	display: table-cell;
-	width: 100%;
-	transform: translateY(-18%);
 }
 
 body.connectaVLCi .journal-content-article .background-holder .shape-divider-wrap {
@@ -1100,6 +1159,21 @@ body.connectaVLCi .journal-content-article .background-holder .shape-divider-wra
 	bottom: 0;
 	z-index: 2;
 	overflow: hidden;
+}
+
+					
+body.connectaVLCi .journal-content-article .col-md-12.col-xs-12 h2 {
+	font-weight: 900;
+	color: #565656;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+					
+body.connectaVLCi .journal-content-article .col-md-12.col-xs-12 h3 {
+	font-family: 'Manrope', 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
+	line-height: 120%;
+	font-weight: 500;
+	font-size: 1.2rem;
 }
 
 body.connectaVLCi .journal-content-article p,
@@ -1155,6 +1229,7 @@ body.connectaVLCi .journal-content-article dl.project-meta {
 	border: 2px solid #ffcd00;
 	padding: 5%;
 	line-height: 150%;
+	min-width: 18vw;
 }
 
 body.connectaVLCi .journal-content-article dl.project-meta dt {
@@ -1175,7 +1250,8 @@ body.connectaVLCi .journal-content-article dl.project-meta dd a {
 	font-weight: 600;
 	letter-spacing: .5px;
 	text-decoration: none;
-	border: 0.025pt solid transparent;
+	border: 0.025pt solid transparent;;
+	display: block;
 }
 
 body.connectaVLCi .journal-content-article dl.project-meta dd a:hover {
@@ -1269,31 +1345,6 @@ body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:afte
 body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
 	display: block;
 	content: ' ';
-}
-
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:before {
-	font-size: 50px;
-	line-height: 50px;
-	height: 50px;
-	width: 50px;
-	margin-right: 10px;
-	display: inline-block;
-	float: left;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: auto 100%;
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/ventana-nueva.svg/489d395d-87ef-4aa7-a031-8af4f714c396?t=1630584861862');
-    -moz-transition: all 0.2s linear;
-    -ms-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-	transition: all 0.2s linear;
-}
-
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:hover:before {
-	filter: grayscale(100%);
-	-webkit-transform: translateX(7px);
-	transform: translateX(7px);
 }
 
 body.connectaVLCi .journal-content-article .col-md-6:last-of-type {
@@ -1662,7 +1713,7 @@ body.recursos .recursos ul li h3:before {
 }
 
 body.recursos .recursos ul li h3 {
-	font-family: Montserrat-SemiBold, sans-serif;
+	font-family: 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 20px 10px 8px 0;
 	height: auto;
