@@ -1,4 +1,4 @@
-/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-16 === */
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-17 === */
 @font-face {
 font-family: "FontAwesome";
 font-weight: normal;
@@ -156,20 +156,33 @@ h2.portlet-title-text {
 /*****************************************************************************************************
 	elementos > a
 ******************************************************************************************************/
-.valencia-layout a {
+.valencia-layout section.portlet section:not(.cabecera-pagina) a {
 	text-decoration: none;
 }
 
-.valencia-layout section .journal-content-article[data-analytics-asset-type="web-content"] > dl dd a,
-.valencia-layout .portlet-journal-content:nth-last-child(n+3) .journal-content-article a {
+.valencia-layout section.portlet section:not(.cabecera-pagina) a {
 	color: #595959;
 	font-weight: 600;
 	border-bottom: 2px solid #ffcd00;
 }
-.valencia-layout section .journal-content-article[data-analytics-asset-type="web-content"] > dl dd a:hover,
-.valencia-layout .portlet-journal-content:nth-last-child(n+3) .journal-content-article a:hover {
+
+.valencia-layout a:hover {
 	color: #333;
 	border-bottom: 2px solid #595959;
+}
+
+.valencia-layout .orbeon a,
+.valencia-layout .orbeon a:hover,
+.valencia-layout footer ul li a,
+.valencia-layout footer ul li a:hover,
+.valencia-layout ul#projectesFilter li a,
+.valencia-layout ul#projectesFilter li a:hover,
+.valencia-layout ul#ulProjectes li a,
+.valencia-layout ul#ulProjectes li a:hover,
+.valencia-layout ul#ulODS li a,
+.valencia-layout ul#ulODS li a:hover {
+	border-bottom: 2px solid transparent;
+	color: transparent;
 }
 
 /* estilos de enlaces con span y animación de borde 
@@ -546,6 +559,14 @@ footer .redpuntoes ul li[title^="European"] a {
 	Peu > Xarxes
 **************************************************************************************************************************************/
 
+footer a {
+	border: none;
+}
+
+footer a:hover {
+	border: none;
+}
+
 footer ul#menu-xarxes {
 	text-align: center;
 	margin: 1em auto;	
@@ -606,6 +627,7 @@ footer ul#menu-xarxes li a {
 	}
 
 	footer ul#menu-xarxes li:hover a {
+		border: 0 solid transparent;
 		border-radius: 50%;
 		box-shadow: 0px 0px 0px 2px #ffcd00;
 	}
@@ -940,37 +962,34 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 
 }
+
 /*****************************************************************************************************
-	Inicio > Bosquejos
+	Inicio > Contacto
 ******************************************************************************************************/
 
-/* noticias */
-.formulario {
-  	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: auto 100%;
-	padding: 3% 0;
-	margin: 60px auto;
+.valencia-layout .orbeon-portlet-body #o5xf-285.navbar,
+.valencia-layout .orbeon-portlet-body .fr-section-title {
+  	display: none;
 }
 
-/* formulario */
-.formulario {
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-movil-formulario-home.jpg/ba2af374-7f9c-f9e3-0ebb-e5528783bdef?t=1627977801367');
-	height: 760px;
+.valencia-layout .portlet .portlet-content .portlet-body .orbeon-portlet-div label, {
+    font-size: 100%;
+    line-height: 150%;
+	padding: 0 0 0.5em 0;
+    display: block;
 }
 
-@media screen and ( min-width: 992px ) {
-	 
-	/* formulario */
-	.formulario {
-		background-position: 47.5% 50%;
-		background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-formulario-home.jpg/e389f015-84cd-0c3f-4407-b32e47f1a482?t=1627900483073');
-		height: 414px;
-	}
-
-
+.valencia-layout .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 4px;
 }
-
+.valencia-layout .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td strong {
+	font-size: 70%;
+	font-weight: normal;
+	line-height: 80% !important;
+	display: inline;
+}
 
 /*****************************************************************************************************
 ======================================================================================================
@@ -1912,7 +1931,30 @@ body.ods .ods #ulODS li .journal-content-article > div {
 	margin: 0 1% 0 0;
 }
 
+
+body.ods .row.container h2 a {
+	color: transparent;
+	border: none;
+	line-height: 0;
+	height: 150px;
+	display: block;
+}
+
+body.ods .row.container h2 a img {
+	position: relative;
+	top: 0;
+	z-index:1;
+}
+
 body.ods .ods #ulODS li .journal-content-article > div picture img {
 	width: 100%;
 	height: auto;
+}
+
+body.ods #ulProjectes.todos:not(:empty):before {
+	margin-top: 2rem;
+	width: 100%;
+	height: auto;
+	display: block;
+	content:'A continuación se enumeran proyectos de Smart City València relacionados con este objetivo:';
 }
