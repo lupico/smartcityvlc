@@ -1,4 +1,15 @@
 /*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-06 === */
+@font-face {
+font-family: "FontAwesome";
+font-weight: normal;
+font-style : normal;
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
@@ -150,13 +161,13 @@ h2.portlet-title-text {
 }
 
 
-.valencia-layout .portlet-journal-content .journal-content-article p a {
+.valencia-layout .portlet-journal-content:nth-last-child(n+3) .journal-content-article a {
 	color: #595959;
 	font-weight: 600;
 	border-bottom: 2px solid #ffcd00;
 }
 
-.valencia-layout .portlet-journal-content .journal-content-article p a:hover {
+.valencia-layout .portlet-journal-content:nth-last-child(n+3) .journal-content-article a:hover {
 	color: #333;
 	border-bottom: 2px solid #595959;
 }
@@ -384,6 +395,18 @@ body.recursos .recursos ul li .journal-content-article .modal-body .embed-respon
 	padding: 3% 2%;
 }
 
+.row.container-fluid .col-md-4:last-of-type {
+	padding: 3% 0 3% 2%;
+}
+
+.row.container-fluid .col-md-6:first-child {
+	padding: 3% 2% 3% 10%;
+}
+
+.row.container-fluid .col-md-6:last-child {
+	padding: 3% 10% 3% 2%;
+}
+
 .row.container .col-md-4:last-of-type {
 	padding: 3% 0 3% 2%;
 }
@@ -398,10 +421,36 @@ body.recursos .recursos ul li .journal-content-article .modal-body .embed-respon
 .row.container .col-md-6:last-of-type {
 	padding: 3% 5% 3% 10%;
 }
-	
-@media screen and ( min-width: 1270px ) {
+				
+.row.container  .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 5% 3% 10%;
+}
+
+
+.row.container .col-md-6:last-of-type {
+	padding: 3% 5% 3% 10%;
+}
+
+@media screen and ( min-width: 992px ) {
 	.row.container {
 		margin: 0 auto;
+	}
+	/* 4ª fila */
+	.row.container .col-sm-12 {
+		padding: 4% 0 0 0;
+	}
+	.row.container .col-md-6 {
+		display: table;
+	}
+	.row.container .col-md-6 div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+		padding: 0 2% 3% 0;
+	}
+	 .row.container .col-md-6::nth-of-type(2):last-of-type {
+		padding: 0 0 3% 2%;
 	}
 }
 /*************************************************************************************************************************************
@@ -980,7 +1029,451 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 }
 
 /* proyecto Connecta  */
-body.connectaVLCi .projectes ul#projectesFilter {
+
+i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
+	font-family:FontAwesome;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:inherit;
+	-webkit-font-smoothing:antialiased;
+	*margin-right:.3em;
+}
+
+body.connectaVLCi .journal-content-article {
+	margin: 0 0 6vh 0;
+}
+
+body.connectaVLCi .journal-content-article .container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+body.connectaVLCi .journal-content-article .background-holder.container-fluid,
+body.connectaVLCi .journal-content-article .col-md-6.background-holder {
+	height: 30vw;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12904179/SmartCityValencia.svg/b849aa48-cf42-6620-a20c-c2fb548ff113?t=1627551663760');
+	margin: 0!important;
+	padding: 0!important;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+}
+
+body.connectaVLCi .journal-content-article .background-holder img {
+	display: table-cell;
+	width: 100%;
+	transform: translateY(-18%);
+}
+
+body.connectaVLCi .journal-content-article .background-holder .shape-divider-wrap {
+	height: 150px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	overflow: hidden;
+}
+
+body.connectaVLCi .journal-content-article p,
+body.connectaVLCi .journal-content-article ul li {
+	font-size: 80%;
+}
+
+body.connectaVLCi .journal-content-article .col-md-4:first-of-type {
+	padding: 3% 2% 3% 0;
+}
+
+body.connectaVLCi .journal-content-article .col-md-4:nth-of-type(2):nth-last-of-type(2),
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 2%;
+}
+
+body.connectaVLCi .journal-content-article .container-fluid {
+	display: table;
+}
+
+body.connectaVLCi .journal-content-article .container-fluid .col-md-6 {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+body.connectaVLCi .journal-content-article .container-fluid .col-md-6:first-child {
+	padding: 3% 2% 3% 10%;
+}
+
+body.connectaVLCi .journal-content-article .container-fluid .col-md-6:last-child {
+	padding: 3% 10% 3% 2%;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6.background-holder {
+	height: 100%;
+	min-height: 30vw;
+	padding: 0;
+}
+
+body.connectaVLCi .journal-content-article .col-md-4:last-of-type {
+	padding: 3% 0 3% 2%;
+}
+
+body.connectaVLCi .journal-content-article .col-md-4 p {
+	padding: 0 4%;
+}
+
+body.connectaVLCi .journal-content-article .col-md-12.HTML {
+	padding: 2% 4%;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta {
+	border: 2px solid #ffcd00;
+	padding: 5%;
+	line-height: 150%;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta dt {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 90%;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta dd {
+	font-size: 80%;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta dd a {
+	padding: 0 20px;
+	margin-right: 20px;
+	text-transform: uppercase;
+	color: #888;
+	font-weight: 600;
+	letter-spacing: .5px;
+	text-decoration: none;
+	border: 0.025pt solid transparent;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta dd a:hover {
+	border: 0.025pt solid #ccc;
+	border-radius: 3px;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta dd a:before {
+	display: inline-block;
+	position: relative;
+	content: '';
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 25px auto;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	left: -13px;
+	top: 8px;
+}
+
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Acti"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/en-servicio.svg/b77cc83f-5506-c87d-5360-d38e2754c7f3?t=1628579691427');
+}
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Progr"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/en-proceso.svg/3665b2a1-6a05-9715-e4a6-e90d864fe4b8?t=1628579692005');
+}
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Pilot"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/piloto.svg/915378b0-5257-055c-2bbf-2e6323bc09f4?t=1628579690836');
+}
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Citizen"]:before,
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Ciutadania"]:before,
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Ciudadan"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudadania.svg/a99130fc-55a7-d8d2-9a02-5aa177aedc06?t=1628579692282');
+}
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title="City Service Project"]:before,
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Municipal"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/servicios.svg/c4fff0d8-32ef-e93b-17fb-843c2732048e?t=1628579690251');
+}
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title="City Project"]:before,
+body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Ciudad"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudad.svg/44fcac92-0a63-ec61-d06e-a98e09b41ca2?t=1628579692866');
+}
+
+body.connectaVLCi .journal-content-article ul.ODS,
+body.connectaVLCi .journal-content-article ul.project-pager {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+body.connectaVLCi .journal-content-article ul.ODS li,
+body.connectaVLCi .journal-content-article ul.project-pager li {
+	margin: 0 2% 0 0;
+	padding: 0;
+	display: inline;
+}
+
+body.connectaVLCi .journal-content-article ul.ODS li a img {
+	height: 100px;
+	width: auto;
+}
+					
+body.connectaVLCi .journal-content-article h3 {
+	padding: 2% 0;
+}
+					
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 5% 3% 10%;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo {
+	line-height: 50px;
+	height: 50px;
+	width: 100%;
+	display: inline-block;
+	padding: 0;
+	font-weight: 600;
+	color: #888;
+	text-align: left;
+	text-decoration: none;
+	border: none;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:hover {
+	color: #ffcd00;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:before,
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:after,
+body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
+	display: block;
+	content: ' ';
+}
+
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:before {
+	font-size: 50px;
+	line-height: 50px;
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+	display: inline-block;
+	float: left;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/ventana-nueva.svg/489d395d-87ef-4aa7-a031-8af4f714c396?t=1630584861862');
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:hover:before {
+	filter: grayscale(100%);
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
+
+body.connectaVLCi .journal-content-article .col-md-6:last-of-type {
+	padding: 3% 5% 3% 10%;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6.cartel-proyecto {
+	padding: 3% 10%;
+	text-align: center;
+}
+
+body.connectaVLCi .journal-content-article .col-md-6.cartel-proyecto img {
+	
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager {
+  background-color: #eee;
+	height: 80px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li {
+	margin: 0;
+	height: 80px;
+	padding: 0;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous,
+body.connectaVLCi .journal-content-article ul.project-pager li.next {
+  width: 46vw;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.all {
+  width: 7vw;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li a {
+	text-decoration: none;
+	color: #888;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1rem;
+	overflow: hidden;
+	line-height: 80px;
+	padding: 0;
+  	background-repeat: no-repeat;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li a:hover {
+	color: #ffcd00;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a,
+body.connectaVLCi .journal-content-article ul.project-pager li.next a {
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-transform: capitalize;
+	background-repeat: no-repeat;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	text-align: center;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a {
+	background-position: 13px center;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.next a {
+	background-position: -20px center;
+}
+
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a i,
+body.connectaVLCi .journal-content-article ul.project-pager li.next a i {
+	font-size: 26px;
+	box-sizing: content-box;
+	width: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	-webkit-transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+}
+
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a i {
+	padding-right: 15px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.next a i {
+	padding-left: 15px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li a i.icon-angle-left:before{content:"\f104"!important;}
+body.connectaVLCi .journal-content-article ul.project-pager li a i.icon-angle-right:before{content:"\f105"!important;}
+
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:after,
+body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
+	position: relative;
+	width: 24px;
+	height: 2px;
+	background-color: #ffcd00;
+	top: -14px;
+	opacity: 0;
+	left: -4px;
+	cursor: pointer;
+	-webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+	-webkit-transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:after {
+	-webkit-transform: translateX(12px);
+	transform: translateX(12px);
+	left: 3px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a:hover i:after {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.previous a:hover i {
+	padding-right: 30px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
+	left: -24px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.next a:hover i:after {
+	opacity: 1;
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.next a:hover i {
+	padding-left: 30px;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.all a span {
+	display: none;;
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.all a i {
+	width:.3em;
+	height:.3em;
+	display: block;
+	border-radius: 0;
+	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	-webkit-transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	font-size: 20px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	background-color: #888;
+	box-shadow: -.5em 0 #888, -.5em .5em #888, .5em 0 #888, .5em -.5em #888, 0 -.5em #888, -.5em -.5em #888, 0 .5em #888, .5em .5em #888; 
+}
+
+body.connectaVLCi .journal-content-article ul.project-pager li.all a:hover i {
+	background-color: #ffcd00;
+	box-shadow: -.6em 0 #ffcd00, -.6em .6em #ffcd00, .6em 0 #ffcd00, .6em -.6em #ffcd00, 0 -.6em #ffcd00, -.6em -.6em #ffcd00, 0 .6em #ffcd00, .6em .6em #ffcd00;  
+}
+	
+@media screen and ( min-width: 992px ) {
+	body.connectaVLCi .journal-content-article .row.container {
+		margin: 0 auto;
+	}
+	/* 4ª fila */
+	body.connectaVLCi .journal-content-article .row.container .col-sm-12 {
+		padding: 4% 0 0 0;
+	}
+	body.connectaVLCi .journal-content-article .row.container .col-md-6 {
+		display: table;
+	}
+	body.connectaVLCi .journal-content-article .row.container .col-md-6 div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	body.connectaVLCi .journal-content-article .row.container .col-md-6 img {
+		width: 100%;
+	}
+	body.connectaVLCi .journal-content-article .row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+		padding: 0 2% 3% 0;
+	}
+	body.connectaVLCi .journal-content-article .row.container .col-md-6::nth-of-type(2):last-of-type {
+		padding: 0 0 3% 2%;
+	}
+}
+
+body.connectaVLCi .projectes ul#projectesFilter,
+body.ods .projectes ul#projectesFilter {
 	display: none;
 }
 
