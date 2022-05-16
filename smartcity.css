@@ -357,7 +357,92 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 
 /*****************************************************************************************************
-	Redes sociales
+	Inicio > Noticias
+******************************************************************************************************/
+
+.noticies {
+	display: block;
+	clear: both;
+	border: 1px solid #eee;
+	height: auto;
+	min-height: 300px;
+}
+
+.noticies ul {
+	list-style: none;
+	display: block;
+}
+
+.noticies ul li {
+	display: inline;
+	width: 24%;
+	height: 250px;
+	overflow: hidden;
+	float: left;
+	margin-right: 1%;
+}
+
+.noticies ul li:last-of-type {
+	margin-right: 0;
+}
+
+
+/*****************************************************************************************************
+	Inicio > Proyectos
+******************************************************************************************************/
+
+.projectes {
+	display: block;
+	border: 1px solid #eee;
+	margin-bottom: 10vh;
+	clear: both;
+	height: auto;
+	min-height: 300px;
+}
+
+.projectes ul {
+	list-style: none;
+	display: block;
+}
+
+.projectes ul.filter li  {
+	display: inline;
+	cursor: pointer;
+	text-transform: uppercase;
+	padding: 0 1em;
+	border: 1px solid #eee;
+	border-radius: 3px;
+}
+
+.projectes #ulProjectes {
+	display: inline-block;
+}
+
+.projectes #ulProjectes li {
+	display: inline;
+	width: 32%;
+	height: 250px;
+	overflow: hidden;
+	float: left;
+	margin-right: 1%;
+}
+
+.projectes #ulProjectes.activo li:not(.activo),
+.projectes #ulProjectes.progreso li:not(.progreso),
+.projectes #ulProjectes.piloto li:not(.piloto),
+.projectes #ulProjectes.chachi li:not(.chachi),
+.projectes #ulProjectes.servicios-ciudadania li:not(.servicios-ciudadania),
+.projectes #ulProjectes.ciudad li:not(.ciudad),
+.projectes #ulProjectes.servicios-municipales li:not(.servicios-municipales) {
+	display: none;
+}
+
+.projectes  #ulProjectes li:last-of-type {
+	margin-right: 0;
+}
+	
+/*****************************************************************************************************
+	Inicio > Redes sociales
 ******************************************************************************************************/
 .redes-sociales {
 	height: auto;
