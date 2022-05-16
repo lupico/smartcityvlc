@@ -1,4 +1,4 @@
-/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-03 === */
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-06 === */
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
@@ -547,6 +547,20 @@ footer ul#menu-xarxes li a {
 }
 
 @media screen and ( min-width: 992px ) {
+	
+	footer ul#menu-xarxes li {
+		margin: 0 5px 0 0;
+	}
+
+	footer ul#menu-xarxes li:last-of-type {
+		margin: 0;
+	}
+
+	footer ul#menu-xarxes li:hover a {
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 2px #ffcd00;
+	}
+
 	footer .redpuntoes {
 		margin: 2% auto;
 		width: 100%;
@@ -923,16 +937,31 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .journal-content-article[data-analytics-asset-title*="Geoportal"] .cartel-proyecto,
 .journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder,
 .journal-content-article[data-analytics-asset-title*="Connecta"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Taxi"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Taxi"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="eficaz"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="eficaz"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="EMT"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="EMT"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Geoservicios"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Geoservicios"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="reutilizaci"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="reutilizaci"] .cartel-proyecto,
 .journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder,
 .journal-content-article[data-analytics-asset-title*="Residuos"] .cartel-proyecto {
 	background-color: #000!important;
 }
 
-.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder,
-.journal-content-article[data-analytics-asset-title*="Minut"] .background-holder,
-.journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder,
-.journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder,
-.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder {
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Minut"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Taxi"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="eficaz"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="EMT"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Geoservicios"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="reutilizaci"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder.container-fluid {
 	background-size: auto 80%!important;
     background-position: top!important;
 }
@@ -949,17 +978,60 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	height: auto;
 	width: 100%;
 }
-	
 
 /* proyecto Connecta  */
-body.connectaVLCi .journal-content-article .projectes #projectesFilter {
+body.connectaVLCi .projectes ul#projectesFilter {
 	display: none;
 }
 
-
-body.connectaVLCi .journal-content-article.projectes #ulProjectes li .journal-content-article div {
+body.connectaVLCi #ulProjectes li .journal-content-article div {
     width: 220px;
     min-height: 205px;
+}
+
+
+body.connectaVLCi #ulProjectes li .journal-content-article div {
+    width: 220px;
+    min-height: 205px;
+}
+
+/* proyecto AppValencia  */
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app {
+	margin-bottom: 2%;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dt,
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dd {
+    width: 49%;
+	display: block;
+	height: 200px;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dt {
+    float: left;
+	text-align: right;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dt img {
+   height: 100%;
+   width: auto;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dd {
+    float: right;
+	text-align: left;
+	padding: 43px 0;
+}
+
+body.app-valencia .journal-content-article article.proyecto .row.container:nth-last-child(2) {
+	background-color: #ffcd00;
+	width: 100vw;
+	margin: 0 auto;
+	max-width: none;
+}
+body.app-valencia .journal-content-article article.proyecto .row.container:nth-last-child(2) div {
+	margin: 0 auto;
+	max-width: 1200px;
 }
 
 /*****************************************************************************************************
