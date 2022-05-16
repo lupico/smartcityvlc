@@ -182,6 +182,9 @@ h2.portlet-title-text {
 .valencia-layout ul#ulODS li a,
 .valencia-layout ul#ulODS li a:hover {
 	border-bottom: 2px solid transparent;
+}
+.valencia-layout footer ul li a,
+.valencia-layout footer ul li a:hover {
 	color: transparent;
 }
 
