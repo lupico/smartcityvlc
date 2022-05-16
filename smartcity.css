@@ -43,14 +43,14 @@ body {
 	max-width: none;
 }
 .col-1, .col-xs-1, .col-2, .col-xs-2, .col-3, .col-xs-3, .col-4, .col-xs-4, .col-5, .col-xs-5, .col-6, .col-xs-6, .col-7, .col-xs-7, .col-8, .col-xs-8, .col-9, .col-xs-9, .col-10, .col-xs-10, .col-11, .col-xs-11, .col-12, .col-xs-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
-  position: relative;
-  width: 100%;
-  padding-right: 0;
-  padding-left: 0;
+	position: relative;
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 section#content {
-  padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 #footer-enlaces li {
@@ -91,12 +91,13 @@ section#content {
 /*****************************************************************************************************
 	estilos generales
 ******************************************************************************************************/
+/* ocultar el título sd ela estructura */
 .journal-content-article dt.text-capitalize {
 	display: none;
 }
 
 .portlet-journal-content .portlet {
- margin: 0;
+	margin: 0;
 	margin-bottom: -25px;
 }
 
@@ -169,6 +170,7 @@ footer .redpuntoes p {
 
 footer .redpuntoes p a {
 	font-size: 100%;
+	text-decoration: none;
 }
 
 footer .redpuntoes {
@@ -185,7 +187,6 @@ footer .redpuntoes ul {
 
 footer .redpuntoes ul li {
 	width: 100%;
-	/*! border: 1px solid blue; */
 	height: auto;
 	margin-right: 0;
 }
@@ -200,10 +201,7 @@ footer .redpuntoes ul li a {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	margin-bottom: 40px;
-}
-
-footer .redpuntoes ul li a:hover {
-	
+	text-decoration: none;
 }
 
 footer .redpuntoes ul li[title^="Gobierno"] a {	
@@ -291,7 +289,82 @@ footer ul#menu-xarxes li a {
 	width: 100%;
 	height: 100%;
 }
+@media screen and ( min-width: 992px ) {
+	footer .redpuntoes {
+		margin: 2% auto 8% -14%;
+		width: 128%;
+	}
+	
+	footer .redpuntoes ul li {
+		width: auto;
+		float: left;
+		height: 100%;
+	}
+	footer .redpuntoes ul li[title^="Gobierno"] {	
+		width: 28.7%;
+	}
 
+	footer .redpuntoes ul li[title^="Red"] {	
+		width: 15.9%;
+	}
+	footer .redpuntoes ul li[title^="Ciudades"] {	
+		width: 12.7%;
+	}
+	footer .redpuntoes ul li[title^="Ajuntament"] {	
+		width: 17%;
+	}
+	footer .redpuntoes ul li[title^="Smart"] {	
+		width: 16.84%;
+	}
+	footer .redpuntoes ul li[title^="European"] {	
+		width: 6.9%;
+	}
+
+	footer .redpuntoes ul li a {	
+		margin: 0;
+	}
+
+	footer .redpuntoes ul li[title^="Red"] a {	
+		background-size: 85% auto;
+	}
+
+	footer .redpuntoes ul li[title^="Ajuntament"] a {	
+		background-size: auto 85px;
+		background-position: 100% 50%;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"] a {	
+		background-size: auto 50px;
+		background-position: 0 50%;
+	}
+	
+	footer .redpuntoes ul li[title^="Ajuntament"]:before,
+	footer .redpuntoes ul li[title^="Smart"]:after {
+		content:'';
+		width: 30px;
+		position: relative;
+		top: 0; 
+		background-size: 10px auto ;
+	}
+	footer .redpuntoes ul li[title^="Ajuntament"]:before {
+		margin-bottom: -80px;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"]:after {
+		margin-top: -80px;
+		float: right;
+	}
+	footer .redpuntoes ul li[title^="Ajuntament"]:before {	
+		background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-tanca.svg/c36e4a15-6346-ed73-70b4-54941bbcab5e?t=1627473490697);
+		background-position: 100% 50%;
+	}
+
+	footer .redpuntoes ul li[title^="Smart"]:after {	
+		background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);	
+		background-position: 0 50%;
+	}
+
+}
 
 /*****************************************************************************************************
 ======================================================================================================
@@ -300,23 +373,16 @@ footer ul#menu-xarxes li a {
 ******************************************************************************************************/
 
 /*****************************************************************************************************
-	Cabecera submenu
+	Inicio > Logros (milestones)
 ******************************************************************************************************/
 
-/* submenu */
-.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY,
-.portlet-journal-content section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12905111/informacion-edificios_2.jpg/54734a95-4510-47e2-ab31-808b05799f45?t=1627641339139');
-
+@media screen and ( min-width: 992px ) {
+	/* ocultar título del menú (porque están los milestones) */
+	.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY .title-page-image {
+		display: none;
+	}
 }
 
-
-/*****************************************************************************************************
-	Logros (milestones)
-******************************************************************************************************/
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
 	height: auto;
 	padding-bottom: 50px;
@@ -353,7 +419,6 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	line-height: 5rem;
 }
 
-
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:before,
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:after {
 	display: inline-block;
@@ -379,7 +444,6 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	position: relative;
 }
 
-
 html[lang="ca-ES"] section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value.st:after {
 	top: 0em;
 	position: relative;
@@ -393,14 +457,30 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.counter-value:nth-child(2):nth-last-child(2) {
 	margin-top: 50px;
 }
+
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 span.symbol {
 	display: none;
 }
 
+@media screen and ( min-width: 992px ) {
+	body:not(.has-control-menu) section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
+		height: 400px;
+		position: relative;
+		z-index: 9;
+		/* colocar por encima del menú */
+		top: -550px;
+		padding: 0;
+		margin: 0 0 -400px 0;
+	}
 
+	section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 {
+		margin: 0;
+	}
+
+}
 
 /*****************************************************************************************************
-	Call to Action > Comocer la Oficina de Ciudad Inteligente
+	Inicio > Call to Action > Comocer la Oficina de Ciudad Inteligente
 ******************************************************************************************************/
 .cta {
   	padding: 3% 0;
@@ -433,7 +513,13 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
   	background-color: transparent;
 }
 
+@media screen and ( min-width: 992px ) {
 	
+	.cta {
+		width: 100%;
+	}
+
+}	
 /*****************************************************************************************************
 	Inicio > Redes sociales
 ******************************************************************************************************/
@@ -460,13 +546,24 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 .redes-sociales #fb-root {display: none;}
 
+@media screen and ( min-width: 992px ) {
+	
+	.redes-sociales {
+		height: 520px;
+		margin: 50px 0;
+	}
+
+	.redes-sociales .facebook .fb_iframe_widget {
+		margin: 0 20px;
+	}
+
+
+}
 /*****************************************************************************************************
-	Bosquejos
+	Inicio > Bosquejos
 ******************************************************************************************************/
 
 /* noticias */
-.noticias,
-.proyectos,
 .formulario {
   	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -475,29 +572,28 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	margin: 60px auto;
 }
 
-
-/* noticias */
-.noticias {
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-movil-noticias-home.jpg/269c7636-2da4-a861-fea8-8da3d16421a6?t=1627977801480');
-	height: 1500px;
-}
-  
-/* proyectos */
-.proyectos {
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-proyectos-home.jpg/1135b4fd-cc1c-0d29-020e-9e91885ab29c?t=1627900483940');
-	height: 1500px;
-	margin-bottom: 100px;
-}
-  
 /* formulario */
 .formulario {
 	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-movil-formulario-home.jpg/ba2af374-7f9c-f9e3-0ebb-e5528783bdef?t=1627977801367');
 	height: 760px;
 }
 
+@media screen and ( min-width: 992px ) {
+	 
+	/* formulario */
+	.formulario {
+		background-position: 47.5% 50%;
+		background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-formulario-home.jpg/e389f015-84cd-0c3f-4407-b32e47f1a482?t=1627900483073');
+		height: 414px;
+	}
+
+
+}
 
 /*****************************************************************************************************
-	Recursos
+======================================================================================================
+	Página Recursos
+======================================================================================================
 ******************************************************************************************************/
 body.recursos {
 	display: block;
@@ -546,7 +642,6 @@ body.recursos .recursos ul li .journal-content-article > div {
 	text-align: center;
 	overflow: hidden;
 	position: relative;
-	
 	
 	display: inline-block;
 	width: 100%;
@@ -618,6 +713,7 @@ body.recursos .recursos ul li p {
 	color: #333;
 	text-align: left;
 	line-height: 140%;
+	min-height: calc(100% - 135px);
 }
 
 body.recursos .recursos ul li p a {
@@ -636,9 +732,7 @@ body.recursos .recursos ul li p a:hover {
 }
 
 body.recursos .recursos #ulRecursos a.btn {
-	margin: 20px 15%;
-	display: inlne;
-	vertical-align: text-bottom;
+	margin: 10px 15%;
 }
 
 body.recursos .recursos #ulRecursos a:nth-child(2):last-child {
@@ -766,172 +860,4 @@ body.recursos .recursos ul li .journal-content-article .video .video-player butt
 		width: 370px;
 	}
 	
-}
-
-
-
-/*****************************************************************************************************
-	Inicio > Proyectos
-******************************************************************************************************/
-
-/*****************************************************************************************************
-	Inicio > Proyectos
-******************************************************************************************************/
-
-
-/*****************************************************************************************************
-======================================================================================================
-------------------------------------------------------------------------------------------------------
-	media queries
-------------------------------------------------------------------------------------------------------
-======================================================================================================
-******************************************************************************************************/
-
-/*****************************************************************************************************
-	+ 992px
-******************************************************************************************************/
-@media screen and ( min-width: 992px ) {
-	
-	/*****************************************************************************************************
-		Cabecera submenu
-	******************************************************************************************************/
-	/* ocultar título del menú (porque están los milestones) */
-	.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY .title-page-image {
-		display: none;
-	}
-	
-
-	/*****************************************************************************************************
-		Logros (milestones)
-	******************************************************************************************************/
-	section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
-		height: 400px;
-		position: relative;
-		z-index: 5;
-		
-		/* colocar por encima del menú */
-		top: -550px;
-		padding: 0;
-		margin: 0 0 -400px 0;
-	}
-
-	section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 {
-		margin: 0;
-	}
-
-	/*****************************************************************************************************
-		Call to Action > Comocer la Oficina de Ciudad Inteligente
-	******************************************************************************************************/
-	.cta {
-		width: 100%;
-	}
-	
-	/*****************************************************************************************************
-		Redes sociales
-	******************************************************************************************************/
-	.redes-sociales {
-		height: 520px;
-		margin: 50px 0;
-	}
-
-	.redes-sociales .facebook .fb_iframe_widget {
-		margin: 0 20px;
-	}
-	
-	/*************************************************************************************************************************************
-		## Peu > Smart City > Xarxes
-	**************************************************************************************************************************************/
-
-	footer .redpuntoes {
-		margin: 2% auto 8% -14%;
-		width: 128%;
-	}
-	
-	footer .redpuntoes ul li {
-		width: auto;
-		float: left;
-		height: 100%;
-	}
-	footer .redpuntoes ul li[title^="Gobierno"] {	
-		width: 28.7%;
-	}
-
-	footer .redpuntoes ul li[title^="Red"] {	
-		width: 15.9%;
-	}
-	footer .redpuntoes ul li[title^="Ciudades"] {	
-		width: 12.7%;
-	}
-	footer .redpuntoes ul li[title^="Ajuntament"] {	
-		width: 17%;
-	}
-	footer .redpuntoes ul li[title^="Smart"] {	
-		width: 16.84%;
-	}
-	footer .redpuntoes ul li[title^="European"] {	
-		width: 6.9%;
-	}
-
-	footer .redpuntoes ul li a {	
-		margin: 0;
-	}
-
-	footer .redpuntoes ul li[title^="Red"] a {	
-		background-size: 85% auto;
-	}
-
-	footer .redpuntoes ul li[title^="Ajuntament"] a {	
-		background-size: auto 85px;
-		background-position: 100% 50%;
-	}
-
-	footer .redpuntoes ul li[title^="Smart"] a {	
-		background-size: auto 50px;
-		background-position: 0 50%;
-	}
-	
-	footer .redpuntoes ul li[title^="Ajuntament"]:before,
-	footer .redpuntoes ul li[title^="Smart"]:after {
-		content:'';
-		width: 30px;
-		position: relative;
-		top: 0; 
-		background-size: 10px auto ;
-	}
-	footer .redpuntoes ul li[title^="Ajuntament"]:before {
-		margin-bottom: -80px;
-	}
-
-	footer .redpuntoes ul li[title^="Smart"]:after {
-		margin-top: -80px;
-		float: right;
-	}
-	footer .redpuntoes ul li[title^="Ajuntament"]:before {	
-		background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-tanca.svg/c36e4a15-6346-ed73-70b4-54941bbcab5e?t=1627473490697);
-		background-position: 100% 50%;
-	}
-
-	footer .redpuntoes ul li[title^="Smart"]:after {	
-		background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);	
-		background-position: 0 50%;
-	}
-	
-	/*****************************************************************************************************
-		Bosquejos
-	******************************************************************************************************/
-
-	/* noticias */
-	.noticias {
-		background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-noticias-home.jpg/473dd545-ecf2-7a9c-71b5-3482896831f3?t=1627900483521');
-		height: 826px;
-	}
-	  
-	/* formulario */
-	.formulario {
-		background-position: 47.5% 50%;
-		background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-formulario-home.jpg/e389f015-84cd-0c3f-4407-b32e47f1a482?t=1627900483073');
-		height: 414px;
-	}
-
-
 }
