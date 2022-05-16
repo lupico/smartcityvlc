@@ -795,17 +795,43 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 /*****************************************************************************************************
 ======================================================================================================
-	Páginas Detalle de Proyectos
+	Páginas Detalle de Proyectos específicos
 ======================================================================================================
 ******************************************************************************************************/
 /* proyectos imag smart city*/
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Minut"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Minut"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .cartel-proyecto,
 .journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder,
 .journal-content-article[data-analytics-asset-title*="Residuos"] .cartel-proyecto {
 	background-color: #000!important;
 }
+
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Minut"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder,
 .journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder {
 	background-size: auto 80%!important;
     background-position: top!important;
+}
+
+/* proyecto ODS */
+.journal-content-article article.proyecto .HTML ul.ODS {
+}
+
+.journal-content-article article.proyecto .HTML ul.ODS li {
+	float: left;
+	width: 16%;
+	margin-right: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.journal-content-article article.proyecto .HTML ul.ODS li a img {
+	height: auto;
+	width: 100%;
 }
 	
 
