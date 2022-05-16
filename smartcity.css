@@ -1,4 +1,4 @@
-/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-07-28 v.1 === */
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-07-29 v.1 === */
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
@@ -23,6 +23,30 @@ body.has-control-menu header section.portlet.focus > .portlet-topper {
 	display: none;
 }
 
+body:not(.has-control-menu) .alert.alert-info {
+	display: none!important;
+}
+
+/*****************************************************************************************************
+	overrides plantilla ayto
+******************************************************************************************************/
+
+body {
+	overflow-x: hidden;
+}
+.valencia-layout > .container {
+	max-width: none;
+}
+.col-1, .col-xs-1, .col-2, .col-xs-2, .col-3, .col-xs-3, .col-4, .col-xs-4, .col-5, .col-xs-5, .col-6, .col-xs-6, .col-7, .col-xs-7, .col-8, .col-xs-8, .col-9, .col-xs-9, .col-10, .col-xs-10, .col-11, .col-xs-11, .col-12, .col-xs-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+section#content {
+    padding-bottom: 0;
+}
 
 /*****************************************************************************************************
 	estilos generales
@@ -55,7 +79,8 @@ footer .redpuntoes p a {
 **************************************************************************************************************************************/
 
 footer .redpuntoes {
-	border: 2px solid magenta;
+	margin: 2% auto 8% -10%;
+	width: 120%;
 }
 
 footer .redpuntoes ul {
@@ -63,8 +88,6 @@ footer .redpuntoes ul {
 	list-style-type: none;
 	margin: 0 auto;
 	width: auto;
-	height: 100px;
-	border: 2px solid magenta;
 }
 
 footer .redpuntoes ul li {
@@ -72,67 +95,222 @@ footer .redpuntoes ul li {
 	width: auto;
 	/*! border: 1px solid blue; */
 	height: 100%;
-	margin-right: 10px;
+	margin-right: 0;
 }
 
-footer .redpuntoes ul li a:before,
-footer .redpuntoes ul li a:after,
+footer .redpuntoes ul li:before,
+footer .redpuntoes ul li:after,
 footer .redpuntoes ul li a {
 	display: block;
-	height:  100px;
+	height:  80px;
 	color: transparent;
-	background-size: auto 100px;
+	background-size: 95% auto;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-color: red;
 }
 
-footer .redpuntoes ul li[title^="Ajuntament"] a:before,
-footer .redpuntoes ul li[title^="Smart"] a:after {
+footer .redpuntoes ul li[title^="Ajuntament"]:before,
+footer .redpuntoes ul li[title^="Smart"]:after {
 	content:'';
 	width: 15px;
 	position: relative;
-	top: 0;
+	top: 0; 
+	background-size: 10px auto ;
+}
+footer .redpuntoes ul li[title^="Ajuntament"]:before {
+	margin-bottom: -80px;
+}
+
+footer .redpuntoes ul li[title^="Smart"]:after {
+	margin-top: -80px;
+	float: right;
 }
 
 footer .redpuntoes ul li a:hover {
 	
 }
 
+footer .redpuntoes ul li[title^="Gobierno"] {	
+	width: 28.7%;
+}
+
 footer .redpuntoes ul li[title^="Gobierno"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/ministerio.jpg/6d7110a2-d29f-b819-0be9-cbe89af98ed0?t=1627473490823);
-	width: 540px;
+}
+
+footer .redpuntoes ul li[title^="Red"] {	
+	width: 15.9%;
 }
 
 footer .redpuntoes ul li[title^="Red"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/red-es.svg/232577a4-e1bc-e790-e7e4-0a5d62c2c81d?t=1627473490651);
-	width: 300px;
+	background-size: 85% auto;
 }
 
+footer .redpuntoes ul li[title^="Ciudades"] {	
+	width: 12.7%;
+}
 footer .redpuntoes ul li[title^="Ciudades"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/ciudades-inteligentes.svg/f0055c4f-4036-d50e-e31c-8fa4d73d71db?t=1627473490885);
-	width: 240px;
 }
-
-footer .redpuntoes ul li[title^="Ajuntament"] a:before {	
+footer .redpuntoes ul li[title^="Ajuntament"]:before {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-tanca.svg/c36e4a15-6346-ed73-70b4-54941bbcab5e?t=1627473490697);
+	background-position: 100%  50%;
 }
 
+footer .redpuntoes ul li[title^="Ajuntament"] {	
+	width: 17%;
+}
 footer .redpuntoes ul li[title^="Ajuntament"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/Ajuntament-de-Valencia.svg/9a6d821a-46b5-ed2d-da10-648d7cb2d8ed?t=1627473490487);
-	width: 280px;
+	background-size: auto 85px;
+	background-position: 100% 50%;
 }
 
+footer .redpuntoes ul li[title^="Smart"] {	
+	width: 16.84%;
+}
 footer .redpuntoes ul li[title^="Smart"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/Smart-City-Valencia+%281%29.svg/f41baa10-3d62-3f45-cf47-2ef3d153c29a?t=1627474190086);
-	width: 360px;
+	background-size: auto 50px;
+	background-position: 0 50%;
 }
 
-footer .redpuntoes ul li[title^="Smart"] a:after {	
-	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);
+footer .redpuntoes ul li[title^="Smart"]:after {	
+	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/parentesis-obri.svg/529950f7-18e9-bad4-3dce-04f61e6474eb?t=1627473490760);	
+	background-position:  0 50%;
 }
 
+footer .redpuntoes ul li[title^="European"] {	
+	width: 6.9%;
+}
 footer .redpuntoes ul li[title^="European"] a {	
 	background-image: url(https://wwwpre.valencia.es/documents/12306043/12903822/unio-europea.svg/806b8676-5453-86c5-a9f8-1e8ac4af5388?t=1627473490555);
-	width: 130px;
 }
+
+/* footer ayuntamiento customizado */
+.portlet-journal-content .journal-content-article img.img-footer.smartcity {
+	max-height: 70px;
+	margin: 28px auto;
+}
+
+/*************************************************************************************************************************************
+	Peu > Xarxes
+**************************************************************************************************************************************/
+
+footer ul#menu-xarxes {
+	text-align: center;
+	margin: 1em auto;	
+}
+
+footer ul#menu-xarxes li {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 90%;
+	opacity: 0.6;
+}
+
+footer ul#menu-xarxes li:hover {
+	opacity: 1;
+}
+
+footer ul#menu-xarxes li.twitter {
+	background-image: url('https://wwwpre.valencia.es/documents/12142848/0/twitter_SmartCityValencia.svg/60e8a359-42bf-78a7-f0fc-dfc6e97e16e6?t=1622620410709');
+}
+
+footer ul#menu-xarxes li.instagram {
+	background-image: url('https://wwwpre.valencia.es/documents/12142848/0/instagram_SmartCityValencia.svg/697f1c91-5766-ae38-0b12-890523c85539?t=1622620410527');
+}
+
+footer ul#menu-xarxes li.facebook {
+	background-image: url('https://wwwpre.valencia.es/documents/12142848/0/facebook_SmartCityValencia.svg/8134e5a8-15e8-f8cd-b6e9-f83726113284?t=1622620410459');
+}
+
+footer ul#menu-xarxes li.linkedin {
+	background-image: url('https://wwwpre.valencia.es/documents/12142848/0/linkedin_SmartCityValencia.svg/d87fb78e-9d66-0202-1f51-6f818ede46f3?t=1622620410618');
+}
+
+footer ul#menu-xarxes li.youtube {
+	background-image: url('https://wwwpre.valencia.es/documents/12142848/0/youtube_SmartCityValencia.svg/3410f22c-d226-ba52-fbaa-2a886eea9574?t=1622620410886');
+}
+
+footer ul#menu-xarxes li a {
+	color: transparent;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*****************************************************************************************************
+======================================================================================================
+	Página Inicio (Valencia ciudad Inteligente)
+======================================================================================================
+******************************************************************************************************/
+/* menu */
+.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12905111/informacion-edificios_2.jpg/54734a95-4510-47e2-ab31-808b05799f45?t=1627641339139');
+	
+	/* colocar por debajo de los logros */
+	margin-top: -400px;
+	
+}
+.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY .title-page-image {
+	display: none;
+}
+
+/* logros (milestones) */
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk {
+/* logros - colocar por debajo del menú*/
+	height: 400px;
+	position: relative;
+	z-index: 5;
+	/*background-color: rgba(255,0,0,0.2);*/
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd > p {
+	display: none;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros {
+	padding-top: 10%;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 {
+	color: #fff;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 3px 3px 8px #000;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span {
+	display: block;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.counter-value {
+	font-size: 5rem;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol {
+	font-size: 3rem;
+	position: relative;
+	text-indent: 8rem;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol:nth-child(2):nth-last-child(2),
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol:nth-child(3):nth-last-child(2) {
+	margin-top: -5rem;
+	line-height: 5rem;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.symbol:nth-child(1) {
+	line-height: 5rem;
+	text-indent: 2rem;
+	text-align: left;
+}
+.portlet-journal-content  section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_hQuLeRE7kLPk .journal-content-article dl dd #logros h2 span.counter-value:nth-child(2):nth-last-child(2) {
+	margin-top: -5rem;
+}
+
+
