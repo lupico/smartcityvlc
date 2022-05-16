@@ -1039,7 +1039,7 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
   	display: none;
 }
 
-.valencia-layout .portlet .portlet-content .portlet-body .orbeon-portlet-div label, {
+.valencia-layout .portlet .portlet-content .portlet-body .orbeon-portlet-div label {
     font-size: 100%;
     line-height: 150%;
 	padding: 0 0 0.5em 0;
@@ -1056,6 +1056,208 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	font-weight: normal;
 	line-height: 80% !important;
 	display: inline;
+}
+
+/*****************************************************************************************************
+======================================================================================================
+	Página Oficina de Ciudad Inteligente
+======================================================================================================
+******************************************************************************************************/
+
+
+.row .titulo h2 {
+	width: 90%;
+	margin: 0 auto 1rem auto;
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1% 10%;
+	color: #ffd040;
+	font-size: 2rem;
+	font-weight: 900;
+	font-family: 'Montserrat', 'Calibri', arial, helvetica, sans-serif;
+}
+
+body.oficina-ciudad-inteligente .titulo p {
+	text-align: center;
+}
+
+/* timeline */
+body.oficina-ciudad-inteligente .timeline ol {
+	margin: 2rem auto;
+	list-style: none;
+	width: 80%;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li {
+	border-top: 1px dashed;
+	border-bottom: 1px dashed;
+	border-color: #ffcd00 !important;
+	margin:0;
+	padding: 30px;
+	position: relative;
+	min-height: 250px;
+}
+/*
+body.oficina-ciudad-inteligente .timeline ol li:nth-child(even):before {
+  right: 100%; 
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+
+body.oficina-ciudad-inteligente .timeline ol li:nth-child(odd):before {
+  left: 100%; 
+  margin-left: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+*/
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(even) {
+	border-left: 2px dashed;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	margin-right: 30px; 
+	padding-right: 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(odd) {
+	border-right: 2px dashed;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	margin-left: 30px; 
+	padding-left: 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+
+
+/* conenido años */
+
+body.oficina-ciudad-inteligente .timeline ol > li dl {
+	border: 1px solid #ffcd00;
+	display: block;
+	width: 80%;
+	height: auto;
+	padding: 3%;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(even) dl {
+	margin: 20px auto 0 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(odd) dl {
+	margin: 20px 0 0 auto ;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li dl ul {
+	list-style-type: circle;
+	padding: 0;
+	margin: 0;
+	display: block;
+	border: none;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li,
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li:nth-child(even),
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li:nth-child(odd) {
+	width: 100%;
+	float: none;
+	display: block;
+	border: 0px solid transparent!important;
+	border-radius: 0!important;
+	height: auto;
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li h4 {
+	font-size: 80px;
+}
+
+/* competencias */
+body.oficina-ciudad-inteligente .competencias ol {
+	margin: 2rem auto;
+	counter-reset: my-awesome-counter;
+	list-style: none;
+	padding-left: 40px;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li:before {
+  content: counter(my-awesome-counter);
+  color: #ffcd00;
+  font-size: 3rem;
+  font-weight: 900;
+  position: absolute;
+  --size: 100px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: -10px;
+  text-align: right;
+  text-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+}
+
+body.oficina-ciudad-inteligente .competencias ol li {
+	width:50%;
+	padding: 0.5rem;
+	margin: 0 0 1rem 0;
+	counter-increment: my-awesome-counter;
+	position: relative;
+	box-sizing: border-box;
+	height: 100px
+}
+
+body.oficina-ciudad-inteligente .competencias ol li h3 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #000;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li p {
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li:nth-child(odd) {
+	float: left;
+	padding: 0.5rem 100px 0.5rem 0.5rem;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li:nth-child(even) {
+	float: right;
+}
+
+body.oficina-ciudad-inteligente img[alt*="2030"] {
+	width: 80%;
+	height: auto;
+	margin: 1rem 10% 3rem 10%;
 }
 
 /*****************************************************************************************************
