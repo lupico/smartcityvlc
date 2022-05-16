@@ -363,9 +363,8 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .noticies {
 	display: block;
 	clear: both;
-	border: 1px solid #eee;
 	height: auto;
-	min-height: 300px;
+	min-height: 550px;
 }
 
 .noticies ul {
@@ -376,102 +375,88 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .noticies ul li {
 	display: inline;
 	width: 24%;
-	height: 250px;
+	height: 550px;
 	overflow: hidden;
 	float: left;
-	margin-right: 1%;
+	margin: 0 1% 3rem 0;
+	border: 1px solid #eee;
+	border-radius: 5px;
 }
 
 .noticies ul li:last-of-type {
 	margin-right: 0;
 }
 
+.noticies ul li > div {
+	height: auto;
+}
+
+.noticies ul li > div > div {
+	height: 190px;
+	width: 102%;
+	margin: 0 0 1.5em -1%;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.noticies ul li img {
+    display: block;
+    width: auto;
+    margin: 0;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.noticies ul li h3 {
+	font-family: Montserrat-SemiBold, sans-serif;
+	margin: 0 0 1rem 0;
+	padding: 0 10px;
+	height: auto;
+	text-align: left;
+	display: block;
+	text-transform: none;
+	font-size: 1.2rem;
+	line-height: 130%;
+}
+
+.noticies ul li h3 a {
+	padding: 0 0 1px 0;
+	margin: 0;
+	font-size: 100%;
+	color: #000;
+	font-weight: 300;
+	height: 100%;
+	text-decoration: none;
+	color: #333;
+	border-bottom: 2px solid transparent;
+}
+
+.noticies ul li h3 a:hover {
+	border-bottom: 2px solid #ffcd00;
+}
+
+.noticies ul li p.fecha {
+}
+
+.noticies ul li p {
+	padding: 0 10px;
+	font-size: 0.9em;
+	text-overflow: ellipsis;
+}
+
+.noticies ul li p span {
+	display: none;
+}
 
 /*****************************************************************************************************
 	Inicio > Proyectos
 ******************************************************************************************************/
 
-.projectes {
-	display: block;
-	border: 1px solid #eee;
-	margin-bottom: 2em;
-	clear: both;
-	height: auto;
-}
-
-.projectes ul {
-	list-style: none;
-	display: block;
-}
-
-.projectes ul#projectesFilter li  {
-	display: inline;
-	cursor: pointer;
-	text-transform: uppercase;
-	padding: 0 1em;
-	border: 1px solid #eee;
-	border-radius: 3px;
-}
-
-.projectes #ulProjectes {
-	display: inline-block;
-}
-
-.projectes #ulProjectes li {
-	width: auto;
-	height: auto;
-	float: left;
-	margin: 0 0 1% 0;
-}
-
-.projectes #ulProjectes li .journal-content-article div {
-	display: block;
-	width: 349.5px;
-	height: 250px;
-	overflow: hidden;
-}
-
-.projectes  #ulProjectes li:last-of-type .journal-content-article div {
-	margin-right: 0;
-}
-
-.projectes #ulProjectes.activo li .journal-content-article div:not(.activo),
-.projectes #ulProjectes.progreso li .journal-content-article div:not(.progreso),
-.projectes #ulProjectes.piloto li .journal-content-article div:not(.piloto),
-.projectes #ulProjectes.chachi li .journal-content-article div:not(.chachi),
-.projectes #ulProjectes.servicios-ciudadania li .journal-content-article div:not(.servicios-ciudadania),
-.projectes #ulProjectes.ciudad li .journal-content-article div:not(.ciudad),
-.projectes #ulProjectes.servicios-municipales li .journal-content-article div:not(.servicios-municipales) {
-	display: none;
-}
-
-.projectes #ulProjectes li .journal-content-article div h3 {
-	font-family: Montserrat, sans-serif;
-	font-size: 2em;
-	margin: 0;
-	padding: 0;
-	height: auto;
-	text-align: center;
-	display: block;
-	}
-
-.projectes #ulProjectes li .journal-content-article div h3 a {
-	display: block;
-	border: 1px solid green;
-	padding: 0;
-	margin: 0;
-	font-size: 60%;
-	color: #000;
-	font-weight: 300;
-	height: 100%;
-	min-height: 420px;
-}
-
-.projectes #ulProjectes li .journal-content-article div h3 a picture img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
 	
 /*****************************************************************************************************
 	Inicio > Redes sociales
