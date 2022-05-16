@@ -1,9 +1,4 @@
-
-<<<<<<< Updated upstream
-		/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-12 v.1 === */
-=======
-		/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-30 v.1 === */
->>>>>>> Stashed changes
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-31 v.1 === */
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
@@ -37,6 +32,7 @@ section.portlet {
 	display: block;
 	clear: both;
 }
+
 /*****************************************************************************************************
 	overrides plantilla ayto
 ******************************************************************************************************/
@@ -111,16 +107,20 @@ section#content {
 /*****************************************************************************************************
 	elementos > h2
 ******************************************************************************************************/
-h2.portlet-title-text {
+h2.portlet-title-text,
+.journal-content-article article.proyecto h3 {
 	font-family: 'Montserrat Black', 'Calibri', Arial, Helvetica, sans-serif;
-	text-align: center;
 	text-transform: uppercase;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding: 1% 10%;
 	color: #ffd040;
 	font-size: 2rem;
 	font-weight: 900;
+}
+
+h2.portlet-title-text {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1% 10%;
+	text-align: center;
 }
 
 /*****************************************************************************************************
@@ -792,6 +792,23 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 
 }
+
+/*****************************************************************************************************
+======================================================================================================
+	Páginas Detalle de Proyectos
+======================================================================================================
+******************************************************************************************************/
+/* proyectos imag smart city*/
+.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Residuos"] .cartel-proyecto {
+	background-color: #000!important;
+}
+.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder {
+	background-size: auto 80%!important;
+    background-position: top!important;
+}
+	
+
 
 /*****************************************************************************************************
 ======================================================================================================
