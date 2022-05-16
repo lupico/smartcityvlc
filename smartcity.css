@@ -156,7 +156,7 @@ h2.portlet-title-text {
 /*****************************************************************************************************
 	elementos > a
 ******************************************************************************************************/
-.valencia-layout section.portlet section:not(.cabecera-pagina) a {
+.valencia-layout a {
 	text-decoration: none;
 }
 
@@ -166,7 +166,7 @@ h2.portlet-title-text {
 	border-bottom: 2px solid #ffcd00;
 }
 
-.valencia-layout a:hover {
+.valencia-layout section.portlet section:not(.cabecera-pagina) a:hover {
 	color: #333;
 	border-bottom: 2px solid #595959;
 }
@@ -243,7 +243,7 @@ a.btn {
     text-align: center;	
 	text-decoration: none;
 	
-	transition: opacity 1.5s ease;
+	transition: all 1.5s ease;
 	-moz-transition: all 1.5s ease;
 	-ms-transition: all 1.5s ease;
 	-o-transition: all 1.5s ease;
@@ -1004,6 +1004,8 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .journal-content-article[data-analytics-asset-title*="WiFi4EU"] .cartel-proyecto,
 .journal-content-article[data-analytics-asset-title*="Minut"] .background-holder,
 .journal-content-article[data-analytics-asset-title*="Minut"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="AppVal"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="AppVal"] .cartel-proyecto,
 .journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder,
 .journal-content-article[data-analytics-asset-title*="Geoportal"] .cartel-proyecto,
 .journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder,
@@ -1025,6 +1027,7 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 .journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="Minut"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="AppVal"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="Taxi"] .background-holder.container-fluid,
@@ -1549,6 +1552,40 @@ body.app-valencia .journal-content-article article.proyecto .row.container:nth-l
 	max-width: 1200px;
 }
 
+/* proyecto ODS */
+body.ods article.proyecto #ulODS {
+	margin: 1rem auto 2rem auto;
+	list-style: none;
+	display: block;
+	text-align: center;
+	min-width: 0;
+}
+
+body.ods article.proyecto #ulODS li {
+	min-width: 0;
+	width: 14.5%;
+	margin: 0 1% 0 0;
+	text-align: center;
+	display: inline-block;
+	height: auto;
+	overflow: hidden;
+}
+
+body.ods article.proyecto #ulODS li img {
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	margin: 0;
+}
+
+body.ods article.proyecto #ulODS li:hover img {
+	height: auto;
+	width: 90%;
+	margin: 5px;
+}
+
 /*****************************************************************************************************
 ======================================================================================================
 	Página Recursos
@@ -1559,6 +1596,7 @@ body.recursos {
 	clear: both;
 	height: auto;
 }
+
 body.ods .ods #ulODS,
 body.recursos .recursos #ulRecursos {
 	list-style: none;
@@ -1579,7 +1617,6 @@ body.recursos .recursos ul li .journal-content-article div {
 body.recursos .recursos ul li {
 }
 
-body.ods .ods #ulODS li:last-of-type,
 body.recursos .recursos ul li:last-of-type {
 	margin-right: 0;
 }
@@ -1949,6 +1986,7 @@ body.ods .row.container h2 a img {
 	z-index:1;
 }
 
+body.ods article.proyecto #ulODS li img,
 body.ods .ods #ulODS li .journal-content-article > div picture img {
 	width: 100%;
 	height: auto;
