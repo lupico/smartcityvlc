@@ -1,0 +1,29 @@
+<div class="tipo recurso">
+	<h3>nombre recusro</h3>
+	if video
+	<div class="video">
+		<img miniatura video>
+		<button data-target="#video" data-toggle="modal">descripción img video</button>
+	</div>
+	/if video
+	
+	<p>descripciopn recurso</p>
+	if not video
+	<button src="url recurso">descargar</button>
+	/if not video
+	
+	
+	if video
+	<div class="info modal fade" id="video" style="display: none;">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				<div class="modal-body">
+					<div class="embed-responsive">
+					  <iframe class="embed-responsive-item" src="url recurso"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	/if video
+</div>

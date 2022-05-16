@@ -1,0 +1,68 @@
+<div class="container d-flex">
+	<div class="row" id="logros">
+		<div class="col-md-3">
+			<h2>
+				<span class="counter-value number porcentaje" data-count="20">0</span> 
+				<span class="symbol">%</span> 
+				<span class="frontcount2">de la ciudadanía <br />utiliza servicios digitales</span>
+			</h2>
+		</div>
+
+		<div class="col-md-3">
+			<h2>
+				<span class="frontcount2">Apoyo a la <br />transformación digital del</span>
+				<span class="counter-value number porcentaje" data-count="72">0</span> 
+				<span class="symbol">%</span> 
+				<span class="frontcount2">de los servicios municipales</span>
+			</h2>
+		</div>
+
+		<div class="col-md-3">
+			<h2>
+				<span class="symbol">&gt;</span> 
+				<span class="counter-value number mayor-que" data-count="750">100</span> 
+				<span class="frontcount2">indicadores para medir <br />la ciudad</span>
+			</h2>
+		</div>
+
+		<div class="col-md-3">
+			<h2>
+				<span class="counter-value number st" data-count="1">0</span> 
+				<span class="symbol"><sup>a</sup></span> 
+				<span class="frontcount2">plataforma española para la gestión integrada de ciudad</span>
+			</h2>
+		</div>
+	</div>
+</div>
+<script>
+    var a = 0;
+$(document).ready(function(){
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+		sym = $this.attr('data-symbol');
+		console.log('symbol:'+sym);
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 4000,
+          easing: 'swing',
+          step: function() {
+			
+				$this.text(Math.floor(this.countNum));
+			
+          },
+          complete: function() {
+			  $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+});
+</script>

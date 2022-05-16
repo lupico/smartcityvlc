@@ -1,0 +1,228 @@
+<style type="text/css">@media (min-width: 765px){
+	.container {
+		width: 1170px;
+	}
+	
+	.arrow-div-resp{
+		text-align: center;
+		padding-top: 17%;
+		margin-right: -10%;
+	}
+}
+
+.single-row-attr-img1 {
+    height: 50%;
+    padding-bottom: 15px;
+}
+
+.attr-img{
+    height: auto;
+    width: 32%;
+    padding-left: 1.4%;
+	padding-bottom: 15px;
+}
+
+.custom-nav-div{
+	background-color: #333;
+    color: #fff;
+    height: 250px;
+    width: 115%;
+    padding: 0;
+    margin-left: -90px;
+}
+
+.custom-a a{
+ text-decoration:none;
+}
+.custom-a a:hover{
+ color:#676767;
+}
+
+
+.custom-nav-div a{
+	text-decoration:none;
+}
+
+.custom-nav-div a:hover{
+	color: #fff;
+}
+
+.custom-white-color{
+	color: #fff;
+}
+
+.custom-arrow-div{
+    /*background-image: url(/documents/20142/64447/UN-sustainable-development-goals.png/9cb283cb-7956-ea16-ef26-ce5e00fa572f?t=1567003787532);*/
+    height: 100%;
+    background-size: cover;
+    background-position: center;;
+}
+
+/*.custom-nav-div:hover{
+	background-color: #333;
+	opacity: 0.3;
+}*/
+
+/*animated-arrow-css*/
+
+.the-arrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+.the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+.the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #fff;
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #fff;
+}
+.the-arrow.-left > .shaft:before {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.the-arrow.-left > .shaft:after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.the-arrow.-right {
+  top: 3px;
+}
+.the-arrow.-right > .shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+  background-color: #fff;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+.the-arrow > .shaft:before {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.animated-arrow {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.25em;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+.animated-arrow:hover {
+  color: #fff;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #fff;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #fff;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  -webkit-transform: translateX(17px);
+          transform: translateX(17px);
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+  position: relative;
+}
+</style>
+<div class="container">
+<div class="row form-group">
+<div class="col-md-12 form-group" style="border-bottom: 1px solid #ddd;">
+<h1 class="entry-title">Indicadores de Ciudad</h1>
+</div>
+
+<div class="col-md-12 form-group custom-a">
+<p>Indicadores basados en la <a href="/vlci/iso-37120-certification">norma ISO 37120</a> “Desarrollo sostenible en las ciudades. Indicadores para los servicios urbanos y la calidad de vida”.<br />
+Esta norma internacional define y establece metodologías que guíen y midan el desempeño de los servicios municipales y el bienestar de la ciudadanía.</p>
+</div>
+</div>
+</div>
+
+<div class="container custom-nav-div">
+<div class="col-md-12 custom-arrow-div" style="text-align: center;padding-top: 8%;">
+<h6 class="text custom-white-color"><a class="custom-white-color animated-arrow" href="/glosario/sustainable-development-goals"><span class="main">Artículo anterior </span></a></h6>
+
+<h3 class="text custom-white-color" style="margin-top: 10px;"><a class="custom-white-color animated-arrow" href="/glosario/sustainable-development-goals"><span class="main">ODS</span></a></h3>
+</div>
+</div>

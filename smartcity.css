@@ -1,9 +1,30 @@
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-23 === */
 
-		/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-12 v.1 === */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/manrope/v4/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_M-bnBeA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-weight: normal;
+font-style : normal;
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
 ******************************************************************************************************/
+
 body.has-control-menu #wrapper .container-fluid-1280 {
 	width: 80%;
 }
@@ -33,6 +54,7 @@ section.portlet {
 	display: block;
 	clear: both;
 }
+
 /*****************************************************************************************************
 	overrides plantilla ayto
 ******************************************************************************************************/
@@ -40,6 +62,7 @@ section.portlet {
 body {
 	overflow-x: hidden;
 }
+
 .valencia-layout > .container {
 	max-width: none;
 }
@@ -71,24 +94,45 @@ section#content {
 	src: local('Montserrat'), local('Montserrat'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Regular.ttf/dc0c5ce6-4b9d-4d7e-511f-13744b95020b?t=1628666936259) format('truetype');
 }
 @font-face {
-	font-family: 'Montserrat SemiBold';
+	font-family: 'Montserrat';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 600;
 	src: local('Montserrat SemiBold'), local('Montserrat SemiBold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-SemiBold.ttf/ab064f98-2179-ed3a-0e9d-bcac62b56610?t=1628666936358) format('truetype');
 }
 @font-face {
-	font-family: 'Montserrat Bold';
+	font-family: 'Montserrat';
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 800;
 	src: local('Montserrat Bold'), local('Montserrat Bold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Bold.ttf/d20c94fc-0386-ca3a-771a-8f8835f6c2c6?t=1628666936103) format('truetype');
 }
+
 @font-face {
-	font-family: 'Montserrat Black';
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 900;
-	src: local('Montserrat Black'), local('Montserrat Black'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Black.ttf/dd515957-6fb2-e158-21f1-d0816e3eeae5?t=1628666936467) format('truetype');
+	src: local('Montserrat'), local('Montserrat'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Black.ttf/dd515957-6fb2-e158-21f1-d0816e3eeae5?t=1628666936467) format('truetype');
 }
 
+@font-face {
+font-family: "FontAwesome";
+font-weight: normal;
+font-style : normal;
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
+i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
+	font-family:FontAwesome;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:inherit;
+	-webkit-font-smoothing:antialiased;
+	*margin-right:.3em;
+}
 /*****************************************************************************************************
 	estilos generales
 ******************************************************************************************************/
@@ -107,18 +151,139 @@ section#content {
 /*****************************************************************************************************
 	elementos > h2
 ******************************************************************************************************/
-h2.portlet-title-text {
-	font-family: 'Montserrat Black', 'Calibri', Arial, Helvetica, sans-serif;
-	text-align: center;
+h2.portlet-title-text,
+.valencia-layout .journal-content-article h3 {
+	font-family: 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding: 1% 10%;
 	color: #ffd040;
 	font-size: 2rem;
 	font-weight: 900;
 }
 
+h2.portlet-title-text {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1% 10%;
+	text-align: center;
+}
+/*****************************************************************************************************
+	elementos > a
+******************************************************************************************************/
+.valencia-layout a {
+	text-decoration: none;
+}
+
+.valencia-layout section.portlet section:not(.cabecera-pagina) a,
+.valencia-layout .journal-content-article article.proyecto p a:not(.enlace-externo) {
+	color: #595959;
+	border-bottom: 2px solid #ffcd00;
+}
+
+.valencia-layout section.portlet section:not(.cabecera-pagina) a:hover,
+.valencia-layout .journal-content-article article.proyecto p a:not(.enlace-externo):hover {
+	color: #333;
+	border-bottom: 2px solid #595959;
+}
+
+.valencia-layout .orbeon a,
+.valencia-layout .orbeon a:hover,
+.valencia-layout footer ul li a,
+.valencia-layout footer ul li a:hover,
+.valencia-layout ul#projectesFilter li a,
+.valencia-layout ul#projectesFilter li a:hover,
+.valencia-layout ul#ulProjectes li a,
+.valencia-layout ul#ulProjectes li a:hover,
+.valencia-layout ul#ulODS li a,
+.valencia-layout ul#ulODS li a:hover,
+.valencia-layout .journal-content-article ul.project-pager li a,
+.valencia-layout .journal-content-article ul.project-pager li a:hover {
+	border-bottom: 2px solid transparent;
+}
+
+.valencia-layout footer ul li a,
+.valencia-layout footer ul li a:hover {
+	color: transparent;
+}
+
+/* estilos de enlaces con span y animación de borde 
+.valencia-layout .portlet-journal-content .journal-content-article p a span:after {
+	-webkit-transition: -webkit-transform .3s ease-out, border-color .3s ease-out;
+	transition: transform .3s ease-out,border-color .3s ease-out;
+	position: absolute;
+	display: block;
+	bottom: -6px;
+	left: 0;
+	width: 100%;
+	-ms-transform: scaleX(0);
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	border-top: 2px solid #ffcd00;
+	border-top-color: rgb(0, 0, 0);
+	border-top-width: 2px;
+	content: "";
+	padding-bottom: inherit;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: -webkit-transform 0.35s cubic-bezier(0.52, 0.01, 0.16, 1);
+	transition: transform 0.35s cubic-bezier(0.52, 0.01, 0.16, 1);
+	bottom: -3px;
+}
+
+.valencia-layout .portlet-journal-content .journal-content-article p a:hover:after {
+	backface-visibility: hidden;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+.valencia-layout .portlet-journal-content .journal-content-article p a:hover {
+	color: #000;
+}
+*/
+
+
+.valencia-layout .journal-content-article a.enlace-externo {
+	line-height: 50px;
+	height: 50px;
+	width: 100%;
+	display: inline-block;
+	padding: 0;
+	font-weight: 600;
+	color: #888;
+	text-align: left;
+	text-decoration: none;
+	border: none;
+}
+
+.valencia-layout .journal-content-article a.enlace-externo:hover {
+	color: #ffcd00;
+}
+
+.valencia-layout .journal-content-article a.enlace-externo:before {
+	display: block;
+	content: ' ';
+	font-size: 50px;
+	line-height: 50px;
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+	display: inline-block;
+	float: left;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/ventana-nueva.svg/489d395d-87ef-4aa7-a031-8af4f714c396?t=1630584861862');
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.valencia-layout .journal-content-article a.enlace-externo:hover:before {
+	filter: grayscale(100%);
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
 /*****************************************************************************************************
 	elementos > botones
 ******************************************************************************************************/
@@ -140,7 +305,7 @@ a.btn {
     text-align: center;	
 	text-decoration: none;
 	
-	transition: opacity 1.5s ease;
+	transition: all 1.5s ease;
 	-moz-transition: all 1.5s ease;
 	-ms-transition: all 1.5s ease;
 	-o-transition: all 1.5s ease;
@@ -152,6 +317,222 @@ a.btn:hover {
 	background-color: #333;
 }
 
+/*************************************************************************************************************************************
+	Elementos > Modals (pop ups)
+**************************************************************************************************************************************/
+
+/* menor que 767px */
+.info.modal,
+body.recursos .recursos ul li .journal-content-article .info.modal  {
+	padding: 2%;
+	width: 100vw;
+	height: 100vh;
+}
+
+body.recursos .recursos ul li .journal-content-article .info.modal  {
+	padding: 2%!important;
+	min-height: 0;
+	margin: 0!important;
+}
+
+.modal-dialog,
+body.recursos .recursos ul li .journal-content-article .modal-dialog {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	max-width: 96vw;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-dialog {
+	min-height: 0;
+	float: none;
+	position: relative;
+	margin: 0 auto;
+}
+
+.portlet-body .info .modal-content,
+body.recursos .recursos ul li .journal-content-article .modal-content {
+	border-radius: 0;
+	padding: 0;
+	max-width: 100vw;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-content,
+body.recursos .recursos ul li .journal-content-article .modal-body {
+	width: auto;
+	min-height: 0;
+}
+
+.modal-body,
+body.recursos .recursos ul li .journal-content-article .modal-body {
+	overflow: auto;
+	padding: 3%;
+	width: 95vw;
+	margin: 0 auto;
+	height: auto;
+	max-height: 90vh;
+	overflow: hidden;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-body {
+	padding: 0;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-body .embed-responsive {
+	width: 100%;
+    margin: 0 auto;
+    float: none;
+	height: 100%;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-body .embed-responsive iframe.embed-responsive-item {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	height: 100%;
+}
+ 
+
+.portlet-body .info {
+	background: rgba(255,255,255,0.2);
+}
+
+.portlet-body .info .modal-content {
+	border-radius: 0;
+	padding: 5% 10%;
+}
+
+.portlet-body .info .modal-content h3 {
+	margin: 1em 0 0.5em 0;
+}
+
+/* menor que 375px */
+
+
+.modal-content .modal-body p {
+	font-size: 80%;
+	line-height: 130%;
+}
+
+.portlet-body .info .modal-content h3 {
+	margin: 0.5em 0;
+	font-size: 100%;
+}
+
+.modal-content .modal-body dl {
+	margin-bottom: 0;
+}
+
+.modal-content .modal-body ul {
+	margin: 0 auto 1rem auto;
+	width: 90%;
+}
+
+.modal-content .modal-body ul li {
+	font-size: 80%;
+}
+
+@media only screen and (min-width: 992px){
+	
+	.modal-open .modal.info {
+		padding: 5vh;
+	}
+	
+	.modal.show .modal-dialog {
+	 height: 90vh;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	.portlet-body .info .modal-content {
+		padding: 0% 8%;
+		padding: 5% 2%;
+		height: 80vh;
+		width: 100%;
+		margin: 0;
+	}
+}
+
+
+/*****************************************************************************************************
+======================================================================================================
+	General > Estilos visualización columnas
+======================================================================================================
+******************************************************************************************************/
+.row.container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+.row.container .col-md-4:first-of-type {
+	padding: 3% 2% 3% 0;
+}
+
+.row.container-fluid .col-md-3:nth-of-type(2):nth-last-of-type(3),
+.row.container-fluid .col-md-3:nth-of-type(3):nth-last-of-type(2),
+.row.container .col-md-4:nth-of-type(2):nth-last-of-type(2),
+.row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 2%;
+}
+
+.row.container-fluid .col-md-4:last-of-type {
+	padding: 3% 0 3% 2%;
+}
+
+.row.container-fluid .col-md-6:first-child {
+	padding: 3% 2% 3% 10%;
+}
+
+.row.container-fluid .col-md-6:last-child {
+	padding: 3% 10% 3% 2%;
+}
+
+.row.container .col-md-4:last-of-type {
+	padding: 3% 0 3% 2%;
+}
+
+.row.container .col-md-4 p {
+	padding: 0 4%;
+}
+.row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 5% 3% 10%;
+}
+
+.row.container .col-md-6:last-of-type {
+	padding: 3% 5% 3% 10%;
+}
+				
+.row.container  .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 5% 3% 10%;
+}
+
+
+.row.container .col-md-6:last-of-type {
+	padding: 3% 5% 3% 10%;
+}
+
+@media screen and ( min-width: 992px ) {
+	.row.container {
+		margin: 0 auto;
+	}
+	/* 4ª fila */
+	.row.container .col-sm-12 {
+		padding: 4% 0 0 0;
+	}
+	.row.container .col-md-6 {
+		display: table;
+	}
+	.row.container .col-md-6 div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+		padding: 0 2% 3% 0;
+	}
+	 .row.container .col-md-6::nth-of-type(2):last-of-type {
+		padding: 0 0 3% 2%;
+	}
+}
 /*************************************************************************************************************************************
 	Cabecera de pagina > Imagen
 **************************************************************************************************************************************/
@@ -167,6 +548,8 @@ body:not(.inicio) section.cabecera-pagina .background-image {
 
 footer .redpuntoes p {
 	font-size: 80%;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 footer .redpuntoes p a {
@@ -184,6 +567,7 @@ footer .redpuntoes ul {
 	list-style-type: none;
 	margin: 0 auto;
 	width: auto;
+	overflow: hidden;
 }
 
 footer .redpuntoes ul li {
@@ -242,6 +626,14 @@ footer .redpuntoes ul li[title^="European"] a {
 	Peu > Xarxes
 **************************************************************************************************************************************/
 
+footer a {
+	border: none;
+}
+
+footer a:hover {
+	border: none;
+}
+
 footer ul#menu-xarxes {
 	text-align: center;
 	margin: 1em auto;	
@@ -292,6 +684,21 @@ footer ul#menu-xarxes li a {
 }
 
 @media screen and ( min-width: 992px ) {
+	
+	footer ul#menu-xarxes li {
+		margin: 0 5px 0 0;
+	}
+
+	footer ul#menu-xarxes li:last-of-type {
+		margin: 0;
+	}
+
+	footer ul#menu-xarxes li:hover a {
+		border: 0 solid transparent;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 2px #ffcd00;
+	}
+
 	footer .redpuntoes {
 		margin: 2% auto;
 		width: 100%;
@@ -622,35 +1029,830 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 
 
 }
+
 /*****************************************************************************************************
-	Inicio > Bosquejos
+	Inicio > Contacto
 ******************************************************************************************************/
 
-/* noticias */
-.formulario {
-  	background-repeat: no-repeat;
+.valencia-layout .orbeon-portlet-body #o5xf-285.navbar,
+.valencia-layout .orbeon-portlet-body .fr-section-title {
+  	display: none;
+}
+
+.valencia-layout .portlet .portlet-content .portlet-body .orbeon-portlet-div label {
+    font-size: 100%;
+    line-height: 150%;
+	padding: 0 0 0.5em 0;
+    display: block;
+}
+
+.valencia-layout .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 4px;
+}
+.valencia-layout .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td strong {
+	font-size: 70%;
+	font-weight: normal;
+	line-height: 80% !important;
+	display: inline;
+}
+
+/*****************************************************************************************************
+======================================================================================================
+	Página Oficina de Ciudad Inteligente
+======================================================================================================
+******************************************************************************************************/
+
+
+.row .titulo h2 {
+	width: 90%;
+	margin: 0 auto 1rem auto;
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1% 10%;
+	color: #ffd040;
+	font-size: 2rem;
+	font-weight: 900;
+	font-family: 'Montserrat', 'Calibri', arial, helvetica, sans-serif;
+}
+
+body.oficina-ciudad-inteligente .titulo p {
+	text-align: center;
+}
+
+/* timeline */
+body.oficina-ciudad-inteligente .timeline ol {
+	margin: 2rem auto;
+	list-style: none;
+	width: 80%;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li {
+	border-top: 1px dashed;
+	border-bottom: 1px dashed;
+	border-color: #ffcd00 !important;
+	margin:0;
+	padding: 30px;
+	position: relative;
+	min-height: 250px;
+}
+/*
+body.oficina-ciudad-inteligente .timeline ol li:nth-child(even):before {
+  right: 100%; 
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+
+body.oficina-ciudad-inteligente .timeline ol li:nth-child(odd):before {
+  left: 100%; 
+  margin-left: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+*/
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(even) {
+	border-left: 2px dashed;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	margin-right: 30px; 
+	padding-right: 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(odd) {
+	border-right: 2px dashed;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	margin-left: 30px; 
+	padding-left: 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+
+
+/* conenido años */
+
+body.oficina-ciudad-inteligente .timeline ol > li dl {
+	border: 1px solid #ffcd00;
+	display: block;
+	width: 80%;
+	height: auto;
+	padding: 3%;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(even) dl {
+	margin: 20px auto 0 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li:nth-child(odd) dl {
+	margin: 20px 0 0 auto ;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li dl ul {
+	list-style-type: circle;
+	padding: 0;
+	margin: 0;
+	display: block;
+	border: none;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li,
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li:nth-child(even),
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li:nth-child(odd) {
+	width: 100%;
+	float: none;
+	display: block;
+	border: 0px solid transparent!important;
+	border-radius: 0!important;
+	height: auto;
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+
+body.oficina-ciudad-inteligente .timeline ol > li dl ul li h4 {
+	font-size: 80px;
+}
+
+/* competencias */
+body.oficina-ciudad-inteligente .competencias ol {
+	margin: 2rem auto;
+	counter-reset: my-awesome-counter;
+	list-style: none;
+	padding-left: 40px;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li:before {
+  content: counter(my-awesome-counter);
+  color: #ffcd00;
+  font-size: 3rem;
+  font-weight: 900;
+  position: absolute;
+  --size: 100px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: -10px;
+  text-align: right;
+  text-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+}
+
+body.oficina-ciudad-inteligente .competencias ol li {
+	width:50%;
+	padding: 0.5rem;
+	margin: 0 0 1rem 0;
+	counter-increment: my-awesome-counter;
+	position: relative;
+	box-sizing: border-box;
+	height: 100px
+}
+
+body.oficina-ciudad-inteligente .competencias ol li h3 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #000;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li p {
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li:nth-child(odd) {
+	float: left;
+	padding: 0.5rem 100px 0.5rem 0.5rem;
+}
+
+body.oficina-ciudad-inteligente .competencias ol li:nth-child(even) {
+	float: right;
+}
+
+body.oficina-ciudad-inteligente img[alt*="2030"] {
+	width: 80%;
+	height: auto;
+	margin: 1rem 10% 3rem 10%;
+}
+
+/*****************************************************************************************************
+======================================================================================================
+	Páginas Detalle de Proyectos específicos
+======================================================================================================
+******************************************************************************************************/
+/* proyectos imag smart city*/
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Minut"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Minut"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="AppVal"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="AppVal"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Connecta"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Taxi"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Taxi"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="eficaz"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="eficaz"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="EMT"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="EMT"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Geoservicios"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Geoservicios"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="reutilizaci"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="reutilizaci"] .cartel-proyecto,
+.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Residuos"] .cartel-proyecto {
+	background-color: #000!important;
+}
+.journal-content-article[data-analytics-asset-title*="Impulso"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Impulso"] .cartel-proyecto {
+	background-color: #ffcc00!important;
+}
+
+.journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Minut"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="AppVal"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Geoportal"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Connecta"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Taxi"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="eficaz"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="EMT"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Geoservicios"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="reutilizaci"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Impulso"] .background-holder.container-fluid {
+	background-size: auto 80%!important;
+    background-position: top!important;
+}
+
+/* proyecto ODS */
+.journal-content-article article.proyecto .HTML ul.ODS li {
+	float: left;
+	width: 16%;
+	margin-right: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.journal-content-article article.proyecto .HTML ul.ODS li a img {
+	height: auto;
+	width: 100%;
+}
+
+/* proyecto Impulso  */
+
+.journal-content-article[data-analytics-asset-title*="Impulso"] .col-md-6 h3 {
+	background-color: #ffcc00;
+	padding: 3px 2px 3px 20px;
+	color: #000;
+}
+
+/* proyecto Connecta  */
+
+i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
+	font-family:FontAwesome;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:inherit;
+	-webkit-font-smoothing:antialiased;
+	*margin-right:.3em;
+}
+
+body[class*="VLCi"] .journal-content-article {
+	margin: 0 0 6vh 0;
+}
+
+body[class*="VLCi"] .journal-content-article .container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+.journal-content-article article.proyecto .col-xs-12.background-holder,
+body.connectaVLCi .journal-content-article .background-holder.container-fluid,
+body.connectaVLCi .journal-content-article .col-md-6.background-holder,
+body.impulsoVLCi .journal-content-article .background-holder.container-fluid,
+body.impulsoVLCi .journal-content-article .col-md-6.background-holder {
+	height: 30vw;
+	background-size: cover;
 	background-position: 50% 50%;
-	background-size: auto 100%;
-	padding: 3% 0;
-	margin: 60px auto;
+	background-repeat: no-repeat;
+	background-image: url('/documents/12306043/12904179/SmartCityValencia.svg/b849aa48-cf42-6620-a20c-c2fb548ff113?t=1627551663760');
+	margin: 0!important;
+	padding: 0!important;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
 }
 
-/* formulario */
-.formulario {
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-movil-formulario-home.jpg/ba2af374-7f9c-f9e3-0ebb-e5528783bdef?t=1627977801367');
-	height: 760px;
+body[class*="VLCi"] .journal-content-article .background-holder .shape-divider-wrap {
+	height: 150px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	overflow: hidden;
 }
 
+					
+body[class*="VLCi"] .journal-content-article .col-md-12.col-xs-12 h2 {
+	font-weight: 900;
+	color: #565656;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+					
+body[class*="VLCi"] .journal-content-article .col-md-12.col-xs-12 h3 {
+	font-family: 'Manrope', 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
+	line-height: 120%;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+body[class*="VLCi"] .journal-content-article p,
+body[class*="VLCi"] .journal-content-article ul li {
+	font-size: 80%;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-4:first-of-type {
+	padding: 3% 2% 3% 0;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-4:nth-of-type(2):nth-last-of-type(2),
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 2%;
+}
+
+body[class*="VLCi"] .journal-content-article .container-fluid {
+	display: table;
+}
+
+body[class*="VLCi"] .journal-content-article .container-fluid .col-md-6 {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+body[class*="VLCi"] .journal-content-article .container-fluid .col-md-6:first-child {
+	padding: 3% 2% 3% 10%;
+}
+
+body[class*="VLCi"] .journal-content-article .container-fluid .col-md-6:last-child {
+	padding: 3% 10% 3% 2%;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6.background-holder {
+	height: 100%;
+	min-height: 30vw;
+	padding: 0;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-4:last-of-type {
+	padding: 3% 0 3% 2%;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-4 p {
+	padding: 0 4%;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-12.HTML {
+	padding: 2% 4%;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta {
+	border: 2px solid #ffcd00;
+	padding: 5%;
+	line-height: 150%;
+	min-width: 18vw;
+	max-width: 20vw;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta dt {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 90%;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta dd {
+	font-size: 80%;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a {
+	padding: 0 20px;
+	margin-right: 20px;
+	text-transform: uppercase;
+	color: #888;
+	font-weight: 600;
+	letter-spacing: .5px;
+	text-decoration: none;
+	border: 0.025pt solid transparent;;
+	display: block;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a:hover {
+	border: 0.025pt solid #ccc;
+	border-radius: 3px;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a:before {
+	display: inline-block;
+	position: relative;
+	content: '';
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 25px auto;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	left: -13px;
+	top: 8px;
+}
+
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Acti"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/en-servicio.svg/b77cc83f-5506-c87d-5360-d38e2754c7f3?t=1628579691427');
+}
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Progr"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/en-proceso.svg/3665b2a1-6a05-9715-e4a6-e90d864fe4b8?t=1628579692005');
+}
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Pilot"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/piloto.svg/915378b0-5257-055c-2bbf-2e6323bc09f4?t=1628579690836');
+}
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title="City Project"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Ciudad"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudad.svg/44fcac92-0a63-ec61-d06e-a98e09b41ca2?t=1628579692866');
+}
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Citizen"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Ciutadania"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Ciudadan"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudadania.svg/a99130fc-55a7-d8d2-9a02-5aa177aedc06?t=1628579692282');
+}
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title="City Service Project"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Municipal"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/servicios.svg/c4fff0d8-32ef-e93b-17fb-843c2732048e?t=1628579690251');
+}
+
+body[class*="VLCi"] .journal-content-article ul.ODS,
+body[class*="VLCi"] .journal-content-article ul.project-pager {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+body[class*="VLCi"] .journal-content-article ul.ODS li,
+body[class*="VLCi"] .journal-content-article ul.project-pager li {
+	margin: 0 2% 0 0;
+	padding: 0;
+	display: inline;
+}
+
+body[class*="VLCi"] .journal-content-article ul.ODS li a img {
+	height: 100px;
+	width: auto;
+}
+					
+body[class*="VLCi"] .journal-content-article h3 {
+	padding: 2% 0;
+}
+					
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
+	padding: 3% 5% 3% 10%;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo {
+	line-height: 50px;
+	height: 50px;
+	width: 100%;
+	display: inline-block;
+	padding: 0;
+	font-weight: 600;
+	color: #888;
+	text-align: left;
+	text-decoration: none;
+	border: none;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:hover {
+	color: #ffcd00;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:before,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i:after,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i:after {
+	display: block;
+	content: ' ';
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6:last-of-type {
+	padding: 3% 5% 3% 10%;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6.cartel-proyecto {
+	padding: 3% 10%;
+	text-align: center;
+}
+
+body[class*="VLCi"] .journal-content-article .col-md-6.cartel-proyecto img {
+	
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager {
+  background-color: #eee;
+	height: 80px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li {
+	margin: 0;
+	height: 80px;
+	padding: 0;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next {
+  width: 46vw;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all {
+  width: 7vw;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li a {
+	text-decoration: none;
+	color: #888;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1rem;
+	overflow: hidden;
+	line-height: 80px;
+	padding: 0;
+  	background-repeat: no-repeat;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li a:hover {
+	color: #ffcd00;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a {
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-transform: capitalize;
+	background-repeat: no-repeat;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	text-align: center;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a {
+	background-position: 13px center;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a {
+	background-position: -20px center;
+}
+
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i {
+	font-size: 26px;
+	box-sizing: content-box;
+	width: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	-webkit-transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+}
+
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i {
+	padding-right: 15px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i {
+	padding-left: 15px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li a i.icon-angle-left:before{content:"\f104"!important;}
+body[class*="VLCi"] .journal-content-article ul.project-pager li a i.icon-angle-right:before{content:"\f105"!important;}
+
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i:after,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i:after {
+	position: relative;
+	width: 24px;
+	height: 2px;
+	background-color: #ffcd00;
+	top: -14px;
+	opacity: 0;
+	left: -4px;
+	cursor: pointer;
+	-webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+	-webkit-transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i:after {
+	-webkit-transform: translateX(12px);
+	transform: translateX(12px);
+	left: 3px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a:hover i:after {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a:hover i {
+	padding-right: 30px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i:after {
+	left: -24px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a:hover i:after {
+	opacity: 1;
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a:hover i {
+	padding-left: 30px;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all a span {
+	display: none;;
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all a i {
+	width:.3em;
+	height:.3em;
+	display: block;
+	border-radius: 0;
+	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	-webkit-transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
+	font-size: 20px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	background-color: #888;
+	box-shadow: -.5em 0 #888, -.5em .5em #888, .5em 0 #888, .5em -.5em #888, 0 -.5em #888, -.5em -.5em #888, 0 .5em #888, .5em .5em #888; 
+}
+
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all a:hover i {
+	background-color: #ffcd00;
+	box-shadow: -.6em 0 #ffcd00, -.6em .6em #ffcd00, .6em 0 #ffcd00, .6em -.6em #ffcd00, 0 -.6em #ffcd00, -.6em -.6em #ffcd00, 0 .6em #ffcd00, .6em .6em #ffcd00;  
+}
+	
 @media screen and ( min-width: 992px ) {
-	 
-	/* formulario */
-	.formulario {
-		background-position: 47.5% 50%;
-		background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-formulario-home.jpg/e389f015-84cd-0c3f-4407-b32e47f1a482?t=1627900483073');
-		height: 414px;
+	body[class*="VLCi"] .journal-content-article .row.container {
+		margin: 0 auto;
 	}
+	/* 4ª fila */
+	body[class*="VLCi"] .journal-content-article .row.container .col-sm-12 {
+		padding: 4% 0 0 0;
+	}
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6 {
+		display: table;
+	}
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6 div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6 img {
+		width: 100%;
+	}
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+		padding: 0 2% 3% 0;
+	}
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6::nth-of-type(2):last-of-type {
+		padding: 0 0 3% 2%;
+	}
+}
+
+body[class*="VLCi"] .projectes ul#projectesFilter,
+body.ods .projectes ul#projectesFilter {
+	display: none;
+}
+
+body.connectaVLCi #ulProjectes li .journal-content-article div {
+    width: 220px;
+    min-height: 27px;
+}
 
 
+body.impulsoVLCi #ulProjectes li .journal-content-article div {
+    width: 250px;
+    min-height: 270px;
+}
+
+/* proyecto AppValencia  */
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app {
+	margin-bottom: 2%;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dt,
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dd {
+    width: 49%;
+	display: block;
+	height: 200px;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dt {
+    float: left;
+	text-align: right;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dt img {
+   height: 100%;
+   width: auto;
+}
+
+body.app-valencia .journal-content-article article.proyecto dl.descargar-app dd {
+    float: right;
+	text-align: left;
+	padding: 43px 0;
+}
+
+body.app-valencia .journal-content-article article.proyecto .row.container:nth-last-child(2) {
+	background-color: #ffcd00;
+	width: 100vw;
+	margin: 0 auto;
+	max-width: none;
+}
+body.app-valencia .journal-content-article article.proyecto .row.container:nth-last-child(2) div {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+/* proyecto ODS */
+body.ods article.proyecto #ulODS {
+	margin: 1rem auto 2rem auto;
+	list-style: none;
+	display: block;
+	text-align: center;
+	min-width: 0;
+}
+
+body.ods article.proyecto #ulODS li {
+	min-width: 0;
+	width: 14.5%;
+	margin: 0 1% 0 0;
+	text-align: center;
+	display: inline-block;
+	height: auto;
+	overflow: hidden;
+}
+
+body.ods article.proyecto #ulODS li img {
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	margin: 0;
+}
+
+body.ods article.proyecto #ulODS li:hover img {
+	height: auto;
+	width: 90%;
+	margin: 5px;
 }
 
 /*****************************************************************************************************
@@ -664,6 +1866,7 @@ body.recursos {
 	height: auto;
 }
 
+body.ods .ods #ulODS,
 body.recursos .recursos #ulRecursos {
 	list-style: none;
 	display: block;
@@ -672,6 +1875,7 @@ body.recursos .recursos #ulRecursos {
 	min-width: 0;
 }
 
+body.ods .ods #ulODS .journal-content-article div,
 body.recursos .recursos ul li .journal-content-article div {
 	height: auto;
 	float: left;
@@ -689,6 +1893,8 @@ body.recursos .recursos ul li:last-of-type {
 body.recursos .recursos ul li > div {
 	height: auto;
 }
+
+body.ods .ods #ulODS li .journal-content-article > div,
 body.recursos .recursos ul li .journal-content-article > div {
 	margin: 0;
 	display: block;
@@ -700,11 +1906,14 @@ body.recursos .recursos ul li .journal-content-article > div {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
+	text-align: center;
+}
+
+body.recursos .recursos ul li .journal-content-article > div {
 	/*! margin: 0 10px 1rem 10px; */
 	margin: 0 auto 1rem auto;
 	border: 1px solid #eee;
 	border-radius: 5px;
-	text-align: center;
 	box-shadow: 3px 3px 8px #ccc;
 }
 
@@ -722,7 +1931,7 @@ body.recursos .recursos ul li h3:before {
 }
 
 body.recursos .recursos ul li h3 {
-	font-family: Montserrat-SemiBold, sans-serif;
+	font-family: 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 20px 10px 8px 0;
 	height: auto;
@@ -805,7 +2014,7 @@ body.recursos .recursos ul li .journal-content-article .video .video-player:befo
 	content:'';
 	z-index: 1;
 	background-color: #ffcd00;
-	outline: 15px solid rgba(255,255,0,0.3);
+	box-shadow: 0 0 1px 15px rgba(255,255,0,0.3);
 	border-radius: 50%;
 	-webkit-border-radius: 50%; 
   -moz-border-radius: 50%; 
@@ -835,7 +2044,7 @@ body.recursos .recursos ul li .journal-content-article .video .video-player:befo
 }
 
 body.recursos .recursos ul li .journal-content-article .video .video-player:hover:before {
-	outline: 30px solid rgba(255,255,0,0.4);
+	box-shadow: 0 0 1px 30px rgba(255,255,0,0.3);
 }
 
 body.recursos .recursos ul li .journal-content-article .video .video-player {
@@ -948,6 +2157,11 @@ body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes 
 		min-height: 405px;
 	}
 	
+	body.recursos .recursos ul li:nth-child(7):nth-last-child(1) .journal-content-article .video {
+		margin-left: 34.5%;
+		min-height: 285px;
+	}
+	
 	body.recursos .recursos ul li .journal-content-article .video .video-player {
 		/*height: auto;
 		width: 100%;*/
@@ -1011,4 +2225,46 @@ body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes 
 	}
 	
 }
-	
+
+
+
+/*****************************************************************************************************
+======================================================================================================
+	Glosario > ODS
+======================================================================================================
+******************************************************************************************************/
+
+body.ods .ods #ulODS li .journal-content-article > div {
+	min-width: 0;
+	width: 19%;
+	margin: 0 1% 0 0;
+}
+
+
+body.ods .row.container h2 a {
+	color: transparent;
+	border: none;
+	line-height: 0;
+	height: 150px;
+	display: block;
+}
+
+body.ods .row.container h2 a img {
+	position: relative;
+	top: 0;
+	z-index:1;
+}
+
+body.ods article.proyecto #ulODS li img,
+body.ods .ods #ulODS li .journal-content-article > div picture img {
+	width: 100%;
+	height: auto;
+}
+
+body.ods #ulProjectes.todos:not(:empty):before {
+	margin-top: 2rem;
+	width: 100%;
+	height: auto;
+	display: block;
+	content:'A continuación se enumeran proyectos de Smart City València relacionados con este objetivo:';
+}
