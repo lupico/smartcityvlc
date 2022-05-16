@@ -1,4 +1,4 @@
-/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-06 === */
+/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-09-16 === */
 @font-face {
 font-family: "FontAwesome";
 font-weight: normal;
@@ -160,13 +160,13 @@ h2.portlet-title-text {
 	text-decoration: none;
 }
 
-
+.valencia-layout section .journal-content-article[data-analytics-asset-type="web-content"] > dl dd a,
 .valencia-layout .portlet-journal-content:nth-last-child(n+3) .journal-content-article a {
 	color: #595959;
 	font-weight: 600;
 	border-bottom: 2px solid #ffcd00;
 }
-
+.valencia-layout section .journal-content-article[data-analytics-asset-type="web-content"] > dl dd a:hover,
 .valencia-layout .portlet-journal-content:nth-last-child(n+3) .journal-content-article a:hover {
 	color: #333;
 	border-bottom: 2px solid #595959;
@@ -1537,7 +1537,7 @@ body.recursos {
 	clear: both;
 	height: auto;
 }
-
+body.ods .ods #ulODS,
 body.recursos .recursos #ulRecursos {
 	list-style: none;
 	display: block;
@@ -1546,6 +1546,7 @@ body.recursos .recursos #ulRecursos {
 	min-width: 0;
 }
 
+body.ods .ods #ulODS .journal-content-article div,
 body.recursos .recursos ul li .journal-content-article div {
 	height: auto;
 	float: left;
@@ -1556,6 +1557,7 @@ body.recursos .recursos ul li .journal-content-article div {
 body.recursos .recursos ul li {
 }
 
+body.ods .ods #ulODS li:last-of-type,
 body.recursos .recursos ul li:last-of-type {
 	margin-right: 0;
 }
@@ -1563,6 +1565,8 @@ body.recursos .recursos ul li:last-of-type {
 body.recursos .recursos ul li > div {
 	height: auto;
 }
+
+body.ods .ods #ulODS li .journal-content-article > div,
 body.recursos .recursos ul li .journal-content-article > div {
 	margin: 0;
 	display: block;
@@ -1574,11 +1578,14 @@ body.recursos .recursos ul li .journal-content-article > div {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
+	text-align: center;
+}
+
+body.recursos .recursos ul li .journal-content-article > div {
 	/*! margin: 0 10px 1rem 10px; */
 	margin: 0 auto 1rem auto;
 	border: 1px solid #eee;
 	border-radius: 5px;
-	text-align: center;
 	box-shadow: 3px 3px 8px #ccc;
 }
 
@@ -1889,4 +1896,23 @@ body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes 
 		min-height: 40px;
 	}
 	
+}
+
+
+
+/*****************************************************************************************************
+======================================================================================================
+	Glosario > ODS
+======================================================================================================
+******************************************************************************************************/
+
+body.ods .ods #ulODS li .journal-content-article > div {
+	min-width: 0;
+	width: 19%;
+	margin: 0 1% 0 0;
+}
+
+body.ods .ods #ulODS li .journal-content-article > div picture img {
+	width: 100%;
+	height: auto;
 }
