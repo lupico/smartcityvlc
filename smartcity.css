@@ -26,7 +26,13 @@ body.has-control-menu header section.portlet.focus > .portlet-topper {
 body:not(.has-control-menu) .alert.alert-info {
 	display: none!important;
 }
-
+.portlet-boundary,
+section.portlet {
+	height: auto;
+	display: block;
+	position: relative;
+	clear: both;
+}
 /*****************************************************************************************************
 	overrides plantilla ayto
 ******************************************************************************************************/
@@ -52,10 +58,40 @@ section#content {
     float: none;
 }
 
+.title-page-image .label-subtitle #tit3 {display: none;}
+
+/*****************************************************************************************************
+	estilos generales > fuentes
+******************************************************************************************************/
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat'), local('Montserrat'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Regular.ttf/dc0c5ce6-4b9d-4d7e-511f-13744b95020b?t=1628666936259) format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat SemiBold';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Montserrat SemiBold'), local('Montserrat SemiBold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-SemiBold.ttf/ab064f98-2179-ed3a-0e9d-bcac62b56610?t=1628666936358) format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat Bold';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Montserrat Bold'), local('Montserrat Bold'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Bold.ttf/d20c94fc-0386-ca3a-771a-8f8835f6c2c6?t=1628666936103) format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat Black';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Montserrat Black'), local('Montserrat Black'), url(https://wwwpre.valencia.es/documents/12306043/12914099/Montserrat-Black.ttf/dd515957-6fb2-e158-21f1-d0816e3eeae5?t=1628666936467) format('truetype');
+}
+
 /*****************************************************************************************************
 	estilos generales
 ******************************************************************************************************/
-
 .journal-content-article dt.text-capitalize {
 	display: none;
 }
@@ -68,9 +104,52 @@ section#content {
 
 
 /*****************************************************************************************************
-	elementos > boton
+	elementos > h2
 ******************************************************************************************************/
+h2.portlet-title-text {
+	font-family: 'Montserrat Black', 'Calibri', Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1% 10%;
+	color: #ffd040;
+	font-size: 2rem;
+	font-weight: 900;
+}
 
+/*****************************************************************************************************
+	elementos > botones
+******************************************************************************************************/
+a.btn {
+    color: #000;
+	font-weight: 600;
+    position: relative;
+    top: 0;
+    opacity: 1;
+    line-height: 20px;
+	text-transform: uppercase;
+	font-size: 12px;
+    padding: 8px 14px;
+	border: 2px solid #ffcd00;
+	border-radius: 4px;
+	background-color: #ffcd00;
+	margin: 0 15%;
+    display: block;
+    text-align: center;	
+	text-decoration: none;
+	
+	transition: opacity 1.5s ease;
+	-moz-transition: all 1.5s ease;
+	-ms-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+}
+
+a.btn:hover {
+    color: #ffcd00;
+	background-color: #333;
+}
 
 /*************************************************************************************************************************************
 	Cabecera de pagina > Imagen
@@ -355,108 +434,6 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
   	background-color: transparent;
 }
 
-
-/*****************************************************************************************************
-	Inicio > Noticias
-******************************************************************************************************/
-
-.noticies {
-	display: block;
-	clear: both;
-	height: auto;
-	min-height: 550px;
-}
-
-.noticies ul {
-	list-style: none;
-	display: block;
-}
-
-.noticies ul li {
-	display: inline;
-	width: 24%;
-	height: 550px;
-	overflow: hidden;
-	float: left;
-	margin: 0 1% 3rem 0;
-	border: 1px solid #eee;
-	border-radius: 5px;
-}
-
-.noticies ul li:last-of-type {
-	margin-right: 0;
-}
-
-.noticies ul li > div {
-	height: auto;
-}
-
-.noticies ul li > div > div {
-	height: 190px;
-	width: 102%;
-	margin: 0 0 1.5em -1%;
-	display: block;
-	text-align: center;
-	overflow: hidden;
-	position: relative;
-}
-
-.noticies ul li img {
-    display: block;
-    width: auto;
-    margin: 0;
-    height: 100%;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-}
-
-.noticies ul li h3 {
-	font-family: Montserrat-SemiBold, sans-serif;
-	margin: 0 0 1rem 0;
-	padding: 0 10px;
-	height: auto;
-	text-align: left;
-	display: block;
-	text-transform: none;
-	font-size: 1.2rem;
-	line-height: 130%;
-}
-
-.noticies ul li h3 a {
-	padding: 0 0 1px 0;
-	margin: 0;
-	font-size: 100%;
-	color: #000;
-	font-weight: 300;
-	height: 100%;
-	text-decoration: none;
-	color: #333;
-	border-bottom: 2px solid transparent;
-}
-
-.noticies ul li h3 a:hover {
-	border-bottom: 2px solid #ffcd00;
-}
-
-.noticies ul li p.fecha {
-}
-
-.noticies ul li p {
-	padding: 0 10px;
-	font-size: 0.9em;
-	text-overflow: ellipsis;
-}
-
-.noticies ul li p span {
-	display: none;
-}
-
-/*****************************************************************************************************
-	Inicio > Proyectos
-******************************************************************************************************/
-
 	
 /*****************************************************************************************************
 	Inicio > Redes sociales
@@ -518,6 +495,289 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	background-image: url('https://wwwpre.valencia.es/documents/12306043/12906622/bosquejo-movil-formulario-home.jpg/ba2af374-7f9c-f9e3-0ebb-e5528783bdef?t=1627977801367');
 	height: 760px;
 }
+
+
+/*****************************************************************************************************
+	Recursos
+******************************************************************************************************/
+body.recursos {
+	display: block;
+	clear: both;
+	height: auto;
+}
+
+body.recursos .recursos #ulRecursos {
+	list-style: none;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	min-width: 0;
+}
+
+body.recursos .recursos ul li {
+	width: auto;
+	height: auto;
+	float: left;
+	margin: 0 0 1% 0;
+}
+
+
+body.recursos .recursos ul li .journal-content-article div {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	
+}
+
+body.recursos .recursos ul li {
+}
+
+body.recursos .recursos ul li:last-of-type {
+	margin-right: 0;
+}
+
+body.recursos .recursos ul li > div {
+	height: auto;
+}
+
+body.recursos .recursos ul li .journal-content-article > div {
+	margin: 0;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	
+	
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 10px 1rem 10px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 3px 3px 8px #ccc;
+}
+
+body.recursos .recursos ul li h3 {
+	font-family: Montserrat-SemiBold, sans-serif;
+	margin: 0;
+	padding: 20px 10px 20px 70px;
+	height: auto;
+	display: block;
+	text-transform: none;
+	font-size: 0.8rem;
+	line-height: 130%;
+	text-align: left;
+	min-height: 70px;
+	
+	background-repeat: no-repeat;
+	background-position: 20px center;
+	background-size: auto 40px;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/calendario.svg/fa51baae-857a-da93-3a89-81800ed83423?t=1628684340763');
+}
+
+
+body.recursos .recursos ul li .url h3 {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .calendario h3 {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/calendario.svg/fa51baae-857a-da93-3a89-81800ed83423?t=1628684340763');
+}
+
+body.recursos .recursos ul li .video h3 {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .pdf h3 {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li h3 {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .documento h3 {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .articulo h3 {
+	/*background-image: url('____');*/
+}
+
+body.recursos .recursos ul li .prensa h3 {
+	/*background-image: url('____');*/
+}
+
+
+body.recursos .recursos ul li p {
+	padding: 0 10px 0 15px;
+	margin: 0;
+	font-size: 0.7em;
+	color: #333;
+	text-align: left;
+	line-height: 140%;
+}
+
+body.recursos .recursos ul li p a {
+	padding: 0 0 1px 0;
+	margin: 0;
+	font-size: 100%;
+	height: 100%;
+	text-decoration: none;
+	font-weight: 600;
+	border-bottom: 2px solid #ffcd00;
+	color: #666;
+}
+
+body.recursos .recursos ul li p a:hover {
+	color: #000;
+}
+
+body.recursos .recursos #ulRecursos a.btn {
+	margin: 20px 15%;
+	display: inlne;
+	vertical-align: text-bottom;
+}
+
+body.recursos .recursos #ulRecursos a:nth-child(2):last-child {
+	margin: 65px 15% 20px 15%;
+}
+
+
+/* documentacion administrativa */
+body.recursos .recursos ul li:nth-child(1):nth-last-child(7) .journal-content-article .documentacion-administrativa {
+	/*margin-left: 50%;*/
+	margin-left: 160px;
+}
+
+body.recursos .recursos ul li:nth-child(4):nth-last-child(4) .journal-content-article .documentacion-administrativa {
+	/*display: block;*/
+	margin-left: 10px;
+}
+
+/* videos */
+body.recursos .recursos ul li .journal-content-article .video .video-player:before {
+	display: block;
+	content:'';
+	z-index: 1;
+	background-color: #ffcd00;
+	outline: 15px solid rgba(255,255,0,0.3);
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	z-index: 2;
+	/*top: 40%;
+	left: 40%;*/
+	margin: 20% 44%;
+	transition: all 1.5s ease;
+	-moz-transition: all 1.5s ease;
+	-ms-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	box-sizing: content-box;
+	pointer-events: none;
+	
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12914794/play.svg/3abaf2ee-5441-eec4-0d05-9a71171bcc5c?t=1628678488101');
+	
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player:hover:before {
+	outline: 30px solid rgba(255,255,0,0.4);
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player {
+	height: 180px;
+	width: 100%;
+	height: 220px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player button {
+	/*height: 180px;*/
+	margin: 0 auto;
+	padding: 0;
+	height: 220px; 
+	width: 320px;
+	display: block;
+	overflow: hidden;
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+body.recursos .recursos ul li .journal-content-article .video .video-player button img {
+    display: block;
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+	   position: relative;
+	z-index: -1;
+   /* transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;*/
+}
+
+@media screen and ( min-width: 640px ) {
+	body.recursos .recursos ul li .journal-content-article div {
+		width: 49%;
+		height: 200px;
+	}
+}
+
+@media screen and ( min-width: 920px ) {
+	body.recursos .recursos #ulRecursos {
+		width: 930px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div {
+		width: 230px;
+		min-height: 200px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.video {
+		width: 310px;
+		min-height: 350px;
+	}
+}
+
+@media screen and ( min-width: 1270px ) {
+	body.recursos .recursos #ulRecursos {
+		width: 1140px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div {
+		width: 264px;
+		min-height: 200px;
+	}
+	
+	body.recursos .recursos ul li .journal-content-article div.video {
+		width: 32%;
+		width: 310px;
+		width: 370px;
+	}
+	
+}
+
+
+
+/*****************************************************************************************************
+	Inicio > Proyectos
+******************************************************************************************************/
+
+/*****************************************************************************************************
+	Inicio > Proyectos
+******************************************************************************************************/
 
 
 /*****************************************************************************************************
