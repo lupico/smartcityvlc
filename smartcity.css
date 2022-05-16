@@ -1,5 +1,9 @@
 
+<<<<<<< Updated upstream
 		/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-12 v.1 === */
+=======
+		/*	València Smart City	· Web Oficina Ciutat Intel·ligent === 2021-08-30 v.1 === */
+>>>>>>> Stashed changes
 
 /*****************************************************************************************************
 	modificaciones admin para facilitar el trabajo
@@ -150,6 +154,142 @@ a.btn {
 a.btn:hover {
     color: #ffcd00;
 	background-color: #333;
+}
+
+/*************************************************************************************************************************************
+	Elementos > Modals (pop ups)
+**************************************************************************************************************************************/
+
+/* menor que 767px */
+.info.modal,
+body.recursos .recursos ul li .journal-content-article .info.modal  {
+	padding: 2%;
+	width: 100vw;
+	height: 100vh;
+}
+
+body.recursos .recursos ul li .journal-content-article .info.modal  {
+	padding: 2%!important;
+	min-height: 0;
+	margin: 0!important;
+}
+
+.modal-dialog,
+body.recursos .recursos ul li .journal-content-article .modal-dialog {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	max-width: 96vw;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-dialog {
+	min-height: 0;
+	float: none;
+	position: relative;
+	margin: 0 auto;
+}
+
+.portlet-body .info .modal-content,
+body.recursos .recursos ul li .journal-content-article .modal-content {
+	border-radius: 0;
+	padding: 0;
+	max-width: 100vw;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-content,
+body.recursos .recursos ul li .journal-content-article .modal-body {
+	width: auto;
+	min-height: 0;
+}
+
+.modal-body,
+body.recursos .recursos ul li .journal-content-article .modal-body {
+	overflow: auto;
+	padding: 3%;
+	width: 95vw;
+	margin: 0 auto;
+	height: auto;
+	max-height: 90vh;
+	overflow: hidden;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-body {
+	padding: 0;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-body .embed-responsive {
+	width: 100%;
+    margin: 0 auto;
+    float: none;
+	height: 100%;
+}
+
+body.recursos .recursos ul li .journal-content-article .modal-body .embed-responsive iframe.embed-responsive-item {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	height: 100%;
+}
+ 
+
+.portlet-body .info {
+	background: rgba(255,255,255,0.2);
+}
+
+.portlet-body .info .modal-content {
+	border-radius: 0;
+	padding: 5% 10%;
+}
+
+.portlet-body .info .modal-content h3 {
+	margin: 1em 0 0.5em 0;
+}
+
+/* menor que 375px */
+
+
+.modal-content .modal-body p {
+	font-size: 80%;
+	line-height: 130%;
+}
+
+.portlet-body .info .modal-content h3 {
+	margin: 0.5em 0;
+	font-size: 100%;
+}
+
+.modal-content .modal-body dl {
+	margin-bottom: 0;
+}
+
+.modal-content .modal-body ul {
+	margin: 0 auto 1rem auto;
+	width: 90%;
+}
+
+.modal-content .modal-body ul li {
+	font-size: 80%;
+}
+
+@media only screen and (min-width: 992px){
+	
+	.modal-open .modal.info {
+		padding: 5vh;
+	}
+	
+	.modal.show .modal-dialog {
+	 height: 90vh;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	.portlet-body .info .modal-content {
+		padding: 0% 8%;
+		padding: 5% 2%;
+		height: 80vh;
+		width: 100%;
+		margin: 0;
+	}
 }
 
 /*************************************************************************************************************************************
@@ -805,7 +945,7 @@ body.recursos .recursos ul li .journal-content-article .video .video-player:befo
 	content:'';
 	z-index: 1;
 	background-color: #ffcd00;
-	outline: 15px solid rgba(255,255,0,0.3);
+	box-shadow: 0 0 1px 15px rgba(255,255,0,0.3);
 	border-radius: 50%;
 	-webkit-border-radius: 50%; 
   -moz-border-radius: 50%; 
@@ -835,7 +975,7 @@ body.recursos .recursos ul li .journal-content-article .video .video-player:befo
 }
 
 body.recursos .recursos ul li .journal-content-article .video .video-player:hover:before {
-	outline: 30px solid rgba(255,255,0,0.4);
+	box-shadow: 0 0 1px 30px rgba(255,255,0,0.3);
 }
 
 body.recursos .recursos ul li .journal-content-article .video .video-player {
@@ -946,6 +1086,11 @@ body.recursos .recursos ul li .journal-content-article div.semana-normas-verdes 
 	body.recursos .recursos ul li .journal-content-article div.video {
 		width: 31.3%;
 		min-height: 405px;
+	}
+	
+	body.recursos .recursos ul li:nth-child(7):nth-last-child(1) .journal-content-article .video {
+		margin-left: 34.5%;
+		min-height: 285px;
 	}
 	
 	body.recursos .recursos ul li .journal-content-article .video .video-player {
