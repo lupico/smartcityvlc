@@ -152,7 +152,7 @@ i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
 	elementos > h2
 ******************************************************************************************************/
 h2.portlet-title-text,
-.journal-content-article article.proyecto h3 {
+.valencia-layout .journal-content-article h3 {
 	font-family: 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	color: #ffd040;
@@ -195,8 +195,8 @@ h2.portlet-title-text {
 .valencia-layout ul#ulProjectes li a:hover,
 .valencia-layout ul#ulODS li a,
 .valencia-layout ul#ulODS li a:hover,
-.valencia-layout .journal-content-article article.proyecto ul.project-pager li a,
-.valencia-layout .journal-content-article article.proyecto ul.project-pager li a:hover {
+.valencia-layout .journal-content-article ul.project-pager li a,
+.valencia-layout .journal-content-article ul.project-pager li a:hover {
 	border-bottom: 2px solid transparent;
 }
 
@@ -1088,6 +1088,10 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .journal-content-article[data-analytics-asset-title*="Residuos"] .cartel-proyecto {
 	background-color: #000!important;
 }
+.journal-content-article[data-analytics-asset-title*="Impulso"] .background-holder,
+.journal-content-article[data-analytics-asset-title*="Impulso"] .cartel-proyecto {
+	background-color: #ffcc00!important;
+}
 
 .journal-content-article[data-analytics-asset-title*="WiFi4EU"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="Minut"] .background-holder.container-fluid,
@@ -1099,7 +1103,8 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .journal-content-article[data-analytics-asset-title*="EMT"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="Geoservicios"] .background-holder.container-fluid,
 .journal-content-article[data-analytics-asset-title*="reutilizaci"] .background-holder.container-fluid,
-.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder.container-fluid {
+.journal-content-article[data-analytics-asset-title*="Residuos"] .background-holder.container-fluid,
+.journal-content-article[data-analytics-asset-title*="Impulso"] .background-holder.container-fluid {
 	background-size: auto 80%!important;
     background-position: top!important;
 }
@@ -1117,6 +1122,14 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	width: 100%;
 }
 
+/* proyecto Impulso  */
+
+.journal-content-article[data-analytics-asset-title*="Impulso"] .col-md-6 h3 {
+	background-color: #ffcc00;
+	padding: 3px 2px 3px 20px;
+	color: #000;
+}
+
 /* proyecto Connecta  */
 
 i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
@@ -1128,18 +1141,20 @@ i[class^="icon-"],[class*=" icon-"], i[class*="fa-"], span[class*="fa-"]{
 	*margin-right:.3em;
 }
 
-body.connectaVLCi .journal-content-article {
+body[class*="VLCi"] .journal-content-article {
 	margin: 0 0 6vh 0;
 }
 
-body.connectaVLCi .journal-content-article .container-fluid {
+body[class*="VLCi"] .journal-content-article .container-fluid {
 	margin: 0;
 	padding: 0;
 }
 
-body.connectaVLCi .journal-content-article .background-holder.container-fluid,
 .journal-content-article article.proyecto .col-xs-12.background-holder,
-body.connectaVLCi .journal-content-article .col-md-6.background-holder {
+body.connectaVLCi .journal-content-article .background-holder.container-fluid,
+body.connectaVLCi .journal-content-article .col-md-6.background-holder,
+body.impulsoVLCi .journal-content-article .background-holder.container-fluid,
+body.impulsoVLCi .journal-content-article .col-md-6.background-holder {
 	height: 30vw;
 	background-size: cover;
 	background-position: 50% 50%;
@@ -1152,7 +1167,7 @@ body.connectaVLCi .journal-content-article .col-md-6.background-holder {
 	position: relative;
 }
 
-body.connectaVLCi .journal-content-article .background-holder .shape-divider-wrap {
+body[class*="VLCi"] .journal-content-article .background-holder .shape-divider-wrap {
 	height: 150px;
 	width: 100%;
 	position: absolute;
@@ -1162,87 +1177,88 @@ body.connectaVLCi .journal-content-article .background-holder .shape-divider-wra
 }
 
 					
-body.connectaVLCi .journal-content-article .col-md-12.col-xs-12 h2 {
+body[class*="VLCi"] .journal-content-article .col-md-12.col-xs-12 h2 {
 	font-weight: 900;
 	color: #565656;
 	line-height: 120%;
 	text-transform: uppercase;
 }
 					
-body.connectaVLCi .journal-content-article .col-md-12.col-xs-12 h3 {
+body[class*="VLCi"] .journal-content-article .col-md-12.col-xs-12 h3 {
 	font-family: 'Manrope', 'Montserrat', 'Calibri', Arial, Helvetica, sans-serif;
 	line-height: 120%;
 	font-weight: 500;
 	font-size: 1.2rem;
 }
 
-body.connectaVLCi .journal-content-article p,
-body.connectaVLCi .journal-content-article ul li {
+body[class*="VLCi"] .journal-content-article p,
+body[class*="VLCi"] .journal-content-article ul li {
 	font-size: 80%;
 }
 
-body.connectaVLCi .journal-content-article .col-md-4:first-of-type {
+body[class*="VLCi"] .journal-content-article .col-md-4:first-of-type {
 	padding: 3% 2% 3% 0;
 }
 
-body.connectaVLCi .journal-content-article .col-md-4:nth-of-type(2):nth-last-of-type(2),
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
+body[class*="VLCi"] .journal-content-article .col-md-4:nth-of-type(2):nth-last-of-type(2),
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
 	padding: 3% 2%;
 }
 
-body.connectaVLCi .journal-content-article .container-fluid {
+body[class*="VLCi"] .journal-content-article .container-fluid {
 	display: table;
 }
 
-body.connectaVLCi .journal-content-article .container-fluid .col-md-6 {
+body[class*="VLCi"] .journal-content-article .container-fluid .col-md-6 {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-body.connectaVLCi .journal-content-article .container-fluid .col-md-6:first-child {
+body[class*="VLCi"] .journal-content-article .container-fluid .col-md-6:first-child {
 	padding: 3% 2% 3% 10%;
 }
 
-body.connectaVLCi .journal-content-article .container-fluid .col-md-6:last-child {
+body[class*="VLCi"] .journal-content-article .container-fluid .col-md-6:last-child {
 	padding: 3% 10% 3% 2%;
 }
 
-body.connectaVLCi .journal-content-article .col-md-6.background-holder {
+body[class*="VLCi"] .journal-content-article .col-md-6.background-holder {
 	height: 100%;
 	min-height: 30vw;
 	padding: 0;
 }
 
-body.connectaVLCi .journal-content-article .col-md-4:last-of-type {
+body[class*="VLCi"] .journal-content-article .col-md-4:last-of-type {
 	padding: 3% 0 3% 2%;
 }
 
-body.connectaVLCi .journal-content-article .col-md-4 p {
+body[class*="VLCi"] .journal-content-article .col-md-4 p {
 	padding: 0 4%;
 }
 
-body.connectaVLCi .journal-content-article .col-md-12.HTML {
+body[class*="VLCi"] .journal-content-article .col-md-12.HTML {
 	padding: 2% 4%;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta {
+body[class*="VLCi"] .journal-content-article dl.project-meta {
 	border: 2px solid #ffcd00;
 	padding: 5%;
 	line-height: 150%;
 	min-width: 18vw;
+	max-width: 20vw;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta dt {
+body[class*="VLCi"] .journal-content-article dl.project-meta dt {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 90%;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta dd {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd {
 	font-size: 80%;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta dd a {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a {
 	padding: 0 20px;
 	margin-right: 20px;
 	text-transform: uppercase;
@@ -1254,12 +1270,12 @@ body.connectaVLCi .journal-content-article dl.project-meta dd a {
 	display: block;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta dd a:hover {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a:hover {
 	border: 0.025pt solid #ccc;
 	border-radius: 3px;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta dd a:before {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a:before {
 	display: inline-block;
 	position: relative;
 	content: '';
@@ -1273,57 +1289,57 @@ body.connectaVLCi .journal-content-article dl.project-meta dd a:before {
 	top: 8px;
 }
 
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Acti"]:before {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Acti"]:before {
 	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/en-servicio.svg/b77cc83f-5506-c87d-5360-d38e2754c7f3?t=1628579691427');
 }
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Progr"]:before {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Progr"]:before {
 	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/en-proceso.svg/3665b2a1-6a05-9715-e4a6-e90d864fe4b8?t=1628579692005');
 }
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Pilot"]:before {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Pilot"]:before {
 	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/piloto.svg/915378b0-5257-055c-2bbf-2e6323bc09f4?t=1628579690836');
 }
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Citizen"]:before,
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Ciutadania"]:before,
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Ciudadan"]:before {
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudadania.svg/a99130fc-55a7-d8d2-9a02-5aa177aedc06?t=1628579692282');
-}
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title="City Service Project"]:before,
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Municipal"]:before {
-	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/servicios.svg/c4fff0d8-32ef-e93b-17fb-843c2732048e?t=1628579690251');
-}
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title="City Project"]:before,
-body.connectaVLCi .journal-content-article dl.project-meta dd a[title*="Ciudad"]:before {
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title="City Project"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Ciudad"]:before {
 	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudad.svg/44fcac92-0a63-ec61-d06e-a98e09b41ca2?t=1628579692866');
 }
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Citizen"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Ciutadania"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Ciudadan"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/ciudadania.svg/a99130fc-55a7-d8d2-9a02-5aa177aedc06?t=1628579692282');
+}
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title="City Service Project"]:before,
+body[class*="VLCi"] .journal-content-article dl.project-meta dd a[title*="Municipal"]:before {
+	background-image: url('https://wwwpre.valencia.es/documents/12306043/12909398/servicios.svg/c4fff0d8-32ef-e93b-17fb-843c2732048e?t=1628579690251');
+}
 
-body.connectaVLCi .journal-content-article ul.ODS,
-body.connectaVLCi .journal-content-article ul.project-pager {
+body[class*="VLCi"] .journal-content-article ul.ODS,
+body[class*="VLCi"] .journal-content-article ul.project-pager {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-body.connectaVLCi .journal-content-article ul.ODS li,
-body.connectaVLCi .journal-content-article ul.project-pager li {
+body[class*="VLCi"] .journal-content-article ul.ODS li,
+body[class*="VLCi"] .journal-content-article ul.project-pager li {
 	margin: 0 2% 0 0;
 	padding: 0;
 	display: inline;
 }
 
-body.connectaVLCi .journal-content-article ul.ODS li a img {
+body[class*="VLCi"] .journal-content-article ul.ODS li a img {
 	height: 100px;
 	width: auto;
 }
 					
-body.connectaVLCi .journal-content-article h3 {
+body[class*="VLCi"] .journal-content-article h3 {
 	padding: 2% 0;
 }
 					
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) {
 	padding: 3% 5% 3% 10%;
 }
 
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo {
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo {
 	line-height: 50px;
 	height: 50px;
 	width: 100%;
@@ -1336,36 +1352,36 @@ body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-t
 	border: none;
 }
 
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:hover {
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:hover {
 	color: #ffcd00;
 }
 
-body.connectaVLCi .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:before,
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:after,
-body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
+body[class*="VLCi"] .journal-content-article .col-md-6:first-of-type:nth-last-of-type(2) a.enlace-externo:before,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i:after,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i:after {
 	display: block;
 	content: ' ';
 }
 
-body.connectaVLCi .journal-content-article .col-md-6:last-of-type {
+body[class*="VLCi"] .journal-content-article .col-md-6:last-of-type {
 	padding: 3% 5% 3% 10%;
 }
 
-body.connectaVLCi .journal-content-article .col-md-6.cartel-proyecto {
+body[class*="VLCi"] .journal-content-article .col-md-6.cartel-proyecto {
 	padding: 3% 10%;
 	text-align: center;
 }
 
-body.connectaVLCi .journal-content-article .col-md-6.cartel-proyecto img {
+body[class*="VLCi"] .journal-content-article .col-md-6.cartel-proyecto img {
 	
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager {
+body[class*="VLCi"] .journal-content-article ul.project-pager {
   background-color: #eee;
 	height: 80px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li {
+body[class*="VLCi"] .journal-content-article ul.project-pager li {
 	margin: 0;
 	height: 80px;
 	padding: 0;
@@ -1374,16 +1390,16 @@ body.connectaVLCi .journal-content-article ul.project-pager li {
 	overflow: hidden;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous,
-body.connectaVLCi .journal-content-article ul.project-pager li.next {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next {
   width: 46vw;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.all {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all {
   width: 7vw;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li a {
+body[class*="VLCi"] .journal-content-article ul.project-pager li a {
 	text-decoration: none;
 	color: #888;
 	display: block;
@@ -1402,12 +1418,12 @@ body.connectaVLCi .journal-content-article ul.project-pager li a {
 	transition: all 0.2s linear;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li a:hover {
+body[class*="VLCi"] .journal-content-article ul.project-pager li a:hover {
 	color: #ffcd00;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a,
-body.connectaVLCi .journal-content-article ul.project-pager li.next a {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a {
 	cursor: pointer;
 	display: inline-block;
 	float: left;
@@ -1419,17 +1435,17 @@ body.connectaVLCi .journal-content-article ul.project-pager li.next a {
 	text-align: center;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a {
 	background-position: 13px center;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.next a {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a {
 	background-position: -20px center;
 }
 
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a i,
-body.connectaVLCi .journal-content-article ul.project-pager li.next a i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i {
 	font-size: 26px;
 	box-sizing: content-box;
 	width: 10px;
@@ -1440,20 +1456,20 @@ body.connectaVLCi .journal-content-article ul.project-pager li.next a i {
 }
 
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i {
 	padding-right: 15px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.next a i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i {
 	padding-left: 15px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li a i.icon-angle-left:before{content:"\f104"!important;}
-body.connectaVLCi .journal-content-article ul.project-pager li a i.icon-angle-right:before{content:"\f105"!important;}
+body[class*="VLCi"] .journal-content-article ul.project-pager li a i.icon-angle-left:before{content:"\f104"!important;}
+body[class*="VLCi"] .journal-content-article ul.project-pager li a i.icon-angle-right:before{content:"\f105"!important;}
 
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:after,
-body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i:after,
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i:after {
 	position: relative;
 	width: 24px;
 	height: 2px;
@@ -1468,41 +1484,41 @@ body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
 	transition: all 0.25s cubic-bezier(0.12, 0.75, 0.4, 1);
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a i:after {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a i:after {
 	-webkit-transform: translateX(12px);
 	transform: translateX(12px);
 	left: 3px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a:hover i:after {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a:hover i:after {
 	opacity: 1;
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.previous a:hover i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.previous a:hover i {
 	padding-right: 30px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.next a i:after {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a i:after {
 	left: -24px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.next a:hover i:after {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a:hover i:after {
 	opacity: 1;
 	-webkit-transform: translateX(7px);
 	transform: translateX(7px);
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.next a:hover i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.next a:hover i {
 	padding-left: 30px;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.all a span {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all a span {
 	display: none;;
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.all a i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all a i {
 	width:.3em;
 	height:.3em;
 	display: block;
@@ -1517,51 +1533,51 @@ body.connectaVLCi .journal-content-article ul.project-pager li.all a i {
 	box-shadow: -.5em 0 #888, -.5em .5em #888, .5em 0 #888, .5em -.5em #888, 0 -.5em #888, -.5em -.5em #888, 0 .5em #888, .5em .5em #888; 
 }
 
-body.connectaVLCi .journal-content-article ul.project-pager li.all a:hover i {
+body[class*="VLCi"] .journal-content-article ul.project-pager li.all a:hover i {
 	background-color: #ffcd00;
 	box-shadow: -.6em 0 #ffcd00, -.6em .6em #ffcd00, .6em 0 #ffcd00, .6em -.6em #ffcd00, 0 -.6em #ffcd00, -.6em -.6em #ffcd00, 0 .6em #ffcd00, .6em .6em #ffcd00;  
 }
 	
 @media screen and ( min-width: 992px ) {
-	body.connectaVLCi .journal-content-article .row.container {
+	body[class*="VLCi"] .journal-content-article .row.container {
 		margin: 0 auto;
 	}
 	/* 4ª fila */
-	body.connectaVLCi .journal-content-article .row.container .col-sm-12 {
+	body[class*="VLCi"] .journal-content-article .row.container .col-sm-12 {
 		padding: 4% 0 0 0;
 	}
-	body.connectaVLCi .journal-content-article .row.container .col-md-6 {
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6 {
 		display: table;
 	}
-	body.connectaVLCi .journal-content-article .row.container .col-md-6 div {
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6 div {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	body.connectaVLCi .journal-content-article .row.container .col-md-6 img {
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6 img {
 		width: 100%;
 	}
-	body.connectaVLCi .journal-content-article .row.container .col-md-6:first-of-type:nth-last-of-type(2) {
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6:first-of-type:nth-last-of-type(2) {
 		padding: 0 2% 3% 0;
 	}
-	body.connectaVLCi .journal-content-article .row.container .col-md-6::nth-of-type(2):last-of-type {
+	body[class*="VLCi"] .journal-content-article .row.container .col-md-6::nth-of-type(2):last-of-type {
 		padding: 0 0 3% 2%;
 	}
 }
 
-body.connectaVLCi .projectes ul#projectesFilter,
+body[class*="VLCi"] .projectes ul#projectesFilter,
 body.ods .projectes ul#projectesFilter {
 	display: none;
 }
 
 body.connectaVLCi #ulProjectes li .journal-content-article div {
     width: 220px;
-    min-height: 205px;
+    min-height: 27px;
 }
 
 
-body.connectaVLCi #ulProjectes li .journal-content-article div {
-    width: 220px;
-    min-height: 205px;
+body.impulsoVLCi #ulProjectes li .journal-content-article div {
+    width: 250px;
+    min-height: 270px;
 }
 
 /* proyecto AppValencia  */
