@@ -155,7 +155,7 @@ a.btn:hover {
 /*************************************************************************************************************************************
 	Cabecera de pagina > Imagen
 **************************************************************************************************************************************/
-section.cabecera-pagina .background-image {
+body:not(.inicio) section.cabecera-pagina .background-image {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -424,12 +424,13 @@ footer ul#menu-xarxes li a {
 
 @media screen and ( min-width: 992px ) {
 	/* ocultar título del menú (porque están los milestones) */
-	.portlet-navigation section#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_c2WDtfFKJ9QY .title-page-image {
+	body.inicio .portlet-navigation section .title-page-image {
 		display: none;
 	}
 }
 
-section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
+
+body.inicio section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
 	height: auto;
 	padding-bottom: 50px;
 	margin-top: -10px;
@@ -440,7 +441,7 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 }
 
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros {
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 {
@@ -509,16 +510,32 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 }
 
 @media screen and ( min-width: 992px ) {
-	body:not(.has-control-menu) section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
-		height: 400px;
-		position: relative;
-		z-index: 9;
+	
+	body.inicio #p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c_ {
 		/* colocar por encima del menú */
-		top: -550px;
-		padding: 0;
-		margin: 0 0 -400px 0;
+		height: 600px;
+		position: relative;
+		top: -600px;
+		margin: 0 0 -600px 0;
+		pointer-events: none;
+		
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		background-image: url('https://wwwpre.valencia.es/documents/12306043/12905111/informacion-edificios_2.jpg/54734a95-4510-47e2-ab31-808b05799f45?t=1627641339139')!important;
 	}
-
+	
+	body.inicio:not(.has-control-menu) section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c {
+		height: 300px;
+		z-index: 5;
+		
+		/*border: 3px solid lime;*/
+	}
+/*
+	body.inicio .portlet-navigation:hover ~ #p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c_ #logros {
+		opacity: 0;
+	}
+	*/
 	section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_U5UCzK2WCf8c dl dd #logros h2 {
 		margin: 0;
 	}
