@@ -394,10 +394,9 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 .projectes {
 	display: block;
 	border: 1px solid #eee;
-	margin-bottom: 10vh;
+	margin-bottom: 2em;
 	clear: both;
 	height: auto;
-	min-height: 300px;
 }
 
 .projectes ul {
@@ -405,7 +404,7 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 	display: block;
 }
 
-.projectes ul.filter li  {
+.projectes ul#projectesFilter li  {
 	display: inline;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -419,26 +418,59 @@ section#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_IN
 }
 
 .projectes #ulProjectes li {
-	display: inline;
-	width: 32%;
-	height: 250px;
-	overflow: hidden;
+	width: auto;
+	height: auto;
 	float: left;
-	margin-right: 1%;
+	margin: 0 0 1% 0;
 }
 
-.projectes #ulProjectes.activo li:not(.activo),
-.projectes #ulProjectes.progreso li:not(.progreso),
-.projectes #ulProjectes.piloto li:not(.piloto),
-.projectes #ulProjectes.chachi li:not(.chachi),
-.projectes #ulProjectes.servicios-ciudadania li:not(.servicios-ciudadania),
-.projectes #ulProjectes.ciudad li:not(.ciudad),
-.projectes #ulProjectes.servicios-municipales li:not(.servicios-municipales) {
+.projectes #ulProjectes li .journal-content-article div {
+	display: block;
+	width: 349.5px;
+	height: 250px;
+	overflow: hidden;
+}
+
+.projectes  #ulProjectes li:last-of-type .journal-content-article div {
+	margin-right: 0;
+}
+
+.projectes #ulProjectes.activo li .journal-content-article div:not(.activo),
+.projectes #ulProjectes.progreso li .journal-content-article div:not(.progreso),
+.projectes #ulProjectes.piloto li .journal-content-article div:not(.piloto),
+.projectes #ulProjectes.chachi li .journal-content-article div:not(.chachi),
+.projectes #ulProjectes.servicios-ciudadania li .journal-content-article div:not(.servicios-ciudadania),
+.projectes #ulProjectes.ciudad li .journal-content-article div:not(.ciudad),
+.projectes #ulProjectes.servicios-municipales li .journal-content-article div:not(.servicios-municipales) {
 	display: none;
 }
 
-.projectes  #ulProjectes li:last-of-type {
-	margin-right: 0;
+.projectes #ulProjectes li .journal-content-article div h3 {
+	font-family: Montserrat, sans-serif;
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	text-align: center;
+	display: block;
+	}
+
+.projectes #ulProjectes li .journal-content-article div h3 a {
+	display: block;
+	border: 1px solid green;
+	padding: 0;
+	margin: 0;
+	font-size: 60%;
+	color: #000;
+	font-weight: 300;
+	height: 100%;
+	min-height: 420px;
+}
+
+.projectes #ulProjectes li .journal-content-article div h3 a picture img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 	
 /*****************************************************************************************************
